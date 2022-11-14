@@ -1,0 +1,23 @@
+name: 'Bug Report'
+description: 'File a bug report'
+labels: ['needs triage', 'Type: Bug 🐛']
+body:
+  - type: 'markdown'
+    attributes:
+      value: |
+        Thanks for creating an issue 😄!
+
+        Please search open/closed issues before submitting. Someone
+        might have asked the same thing before 😉!
+
+        We're all volunteers here, so help us help you by taking the time to
+        accurately fill out this template. ❤️
+  - type: 'textarea'
+    id: 'description'
+    attributes:
+      label: 'Description'
+      description: 'A brief description of the issue. Also include reproduction steps.'
+      placeholder: |
+        When I ____, I expected ____ to happen but ____ happened instead.
+    validations:
+      required: true
