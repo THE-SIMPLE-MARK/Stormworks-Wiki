@@ -23,7 +23,7 @@
     "@chakra-ui/icons": "2.0.11",
     "@chakra-ui/props-docs": "2.0.23",
     "@chakra-ui/react": "2.3.7",
-    "@chakra-ui/skip-nav": "2.0.11",
+    "@chakra-ui/skip-nav": "2.0.12",
     "@chakra-ui/theme-tools": "2.0.12",
     "@chakra-ui/utils": "2.0.11",
     "@codesandbox/sandpack-react": "^1.2.2",
