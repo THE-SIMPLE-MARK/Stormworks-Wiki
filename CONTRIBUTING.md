@@ -21,12 +21,12 @@ Setting up the docsite project is easy. It's a Next.js site. The following steps
 will get you up and running to contribute to the Chakra UI docsite:
 
 1. Fork the repo (click the <kbd>Fork</kbd> button at the top right of
-   [this page](https://github.com/chakra-ui/chakra-ui-docs))
+   [this page](https://github.com/THE-SIMPLE-MARK/Stormworks-Wiki))
 
 2. Clone your fork locally
 
 ```sh
-git clone https://github.com/<your_github_username>/chakra-ui-docs.git
+git clone https://github.com/<your_github_username>/stormworks-wiki.git
 cd chakra-ui-docs
 ```
 
@@ -70,12 +70,10 @@ cd chakra-ui-docs
 
 ## Updating the docs for new release
 
-When a new version of `@chakra-ui/react` has been released, here's what you need
+When a new version of Stormworks has been released, here's what you need
 to do to get it reflected in the docs:
 
-- Bump the version of `@chakra-ui/react`
-- Run `pnpm changelog:gen` to fetch the most recent changelog from the
-  [main repository](https://github.com/chakra-ui/chakra-ui)
+- Bump the version of this project
 - Open a Pull Request titled `docs: updates for new release`
 
 ### Commit Convention
@@ -106,7 +104,7 @@ https://www.conventionalcommits.org/ or check out the
 
 ### Steps to PR
 
-1. Fork of the chakra-ui-docs repository and clone your fork
+1. Fork of the `Stormworks-Wiki` repository and clone your fork
 
 2. Create a new branch out of the `main` branch. We follow the convention
    `[type/scope]`. For example `fix/accordion-hook` or `docs/menu-typo`. `type`
@@ -114,9 +112,9 @@ https://www.conventionalcommits.org/ or check out the
    commit type. `scope` is just a short id that describes the scope of work.
 
 3. Make and commit your changes following the
-   [commit convention](https://github.com/chakra-ui/chakra-ui-docs/blob/main/CONTRIBUTING.md#commit-convention).
-   As you develop, you can run `pnpm lint` to make sure everything works as
-   expected. Please note that you might have to run `pnpm` first in order to
+   [commit convention](https://github.com/THE-SIMPLKE-MARK/Stormworks-Wiki/blob/main/CONTRIBUTING.md#commit-convention).
+   As you develop, you can run `npm lint` to make sure everything works as
+   expected. Please note that you might have to run `npm` first in order to
    install all dependencies.
 
 ## Want to write a blog post or tutorial
