@@ -5,7 +5,6 @@
     "dev": "next",
     "build": "next build",
     "lint": "next lint",
-    "postinstall": "pnpm-deduplicate",
     "gen:theme-typings": "chakra-cli tokens theme.ts",
     "avatars:gen": "tsx scripts/avatars.ts",
     "members:gen": "tsx scripts/all-members.ts",
@@ -14,9 +13,9 @@
     "contributing:gen": "tsx scripts/build-contributing-page.ts",
     "start": "next start",
     "cache:clean": "rm -rf .next .contentlayer",
-    "clean": "rm -rf pnpm-lock.yaml node_modules",
-    "reinstall": "pnpm clean && pnpm i",
-    "deps": "pnpm up '@chakra-ui/*' --latest"
+    "clean": "rm -rf package-lock.json node_modules",
+    "reinstall": "npm clean && npm i",
+    "deps": "npm up '@chakra-ui/*' --latest"
   },
   "dependencies": {
     "@chakra-ui/cli": "2.1.8",
@@ -90,7 +89,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "mkdirp": "^1.0.4",
     "node-fetch": "^3.2.10",
-    "pnpm-deduplicate": "^0.3.1",
     "prettier": "^2.7.1",
     "react-multi-ref": "^1.0.0",
     "semver": "^7.3.7",
