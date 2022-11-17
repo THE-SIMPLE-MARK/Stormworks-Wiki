@@ -3,6 +3,7 @@ import * as React from 'react'
 import Container from './container'
 import DiscordIcon from './docs/discord-logo'
 import { t } from 'utils/i18n'
+import siteConfig from 'configs/site-config.json'
 
 export function DiscordStrip(props: BoxProps) {
   return (
@@ -39,7 +40,7 @@ export function DiscordStrip(props: BoxProps) {
             justifyContent='center'
             display='inline-flex'
             alignItems='center'
-            href='https://discord.gg/chakra-ui'
+            href={siteConfig.discord.url}
             rel='noopener'
             target='_blank'
             fontWeight='bold'
@@ -50,7 +51,7 @@ export function DiscordStrip(props: BoxProps) {
             rounded='lg'
             fontSize='md'
           >
-            {t('component.discord-strip.join-the-chakra-discord')}
+            {t('component.discord-strip.join-the-discord')}
           </chakra.button>
         </Flex>
       </Container>

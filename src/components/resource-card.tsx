@@ -44,7 +44,7 @@ function ResourceCard(props: ResourceCardProps) {
       }}
     >
       <VStack spacing={2} align='stretch'>
-        <Wrap className='algolia-exclude' spacing='3' mb='2' align='center'>
+        <Wrap spacing='3' mb='2' align='center'>
           {tags?.map((tag, index) => (
             <WrapItem key={index} overflow='hidden'>
               <Badge

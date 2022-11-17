@@ -11,6 +11,11 @@ import {
   useDisclosure,
   useEventListener,
   useUpdateEffect,
+	Text,
+	HStack,
+	VisuallyHidden,
+	Kbd,
+	HTMLChakraProps
 } from '@chakra-ui/react'
 import { findAll } from 'highlight-words-core'
 import { matchSorter } from 'match-sorter'
@@ -19,8 +24,8 @@ import { useRouter } from 'next/router'
 import * as React from 'react'
 import MultiRef from 'react-multi-ref'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import { SearchButton } from './algolia-search'
 import searchData from 'configs/search-meta.json'
+import { t } from 'utils/i18n'
 
 interface OptionTextProps {
   searchWords: string[]
@@ -34,12 +39,12 @@ function OptionText({ searchWords, textToHighlight }: OptionTextProps) {
     autoEscape: true,
   })
 
-  const highlightedText = chunks.map((chunk) => {
+  const highlightedText = chunks.map((chunk, index) => {
     const { end, highlight, start } = chunk
     const text = textToHighlight.substr(start, end - start)
     if (highlight) {
       return (
-        <Box as='mark' bg='transparent' color='teal.500'>
+        <Box key={index} as='mark' bg='transparent' color='teal.500'>
           {text}
         </Box>
       )
@@ -115,7 +120,72 @@ function HashIcon(props) {
   )
 }
 
-function OmniSearch() {
+const ACTION_KEY_DEFAULT = ['Ctrl', 'Control']
+const ACTION_KEY_APPLE = ['⌘', 'Command']
+
+function SearchButton(props: HTMLChakraProps<'button'>) {
+	const [actionKey, setActionKey] = React.useState<string[]>(ACTION_KEY_APPLE)
+
+	React.useEffect(() => {
+		if (typeof navigator === 'undefined') return
+		const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
+		if (!isMac) {
+			setActionKey(ACTION_KEY_DEFAULT)
+		}
+	}, [])
+
+	return (
+		<chakra.button
+			flex='1'
+			type='button'
+			mx='6'
+			lineHeight='1.2'
+			w='100%'
+			bg='white'
+			whiteSpace='nowrap'
+			display={{ base: 'none', sm: 'flex' }}
+			alignItems='center'
+			color='gray.600'
+			_dark={{ bg: 'gray.700', color: 'gray.400' }}
+			py='3'
+			px='4'
+			outline='0'
+			_focus={{ shadow: 'outline' }}
+			shadow='base'
+			rounded='md'
+			{...props}
+		>
+			<SearchIcon />
+			<HStack w='full' ml='3' spacing='4px'>
+				<Text textAlign='left' flex='1'>
+					{t('component.search-bar.search-the-docs')}
+				</Text>
+				<HStack spacing='4px'>
+					<VisuallyHidden>
+						{t('component.search-bar.press')}{' '}
+					</VisuallyHidden>
+					<Kbd rounded='2px'>
+						<chakra.div
+							as='abbr'
+							title={actionKey[1]}
+							textDecoration='none !important'
+						>
+							{actionKey[0]}
+						</chakra.div>
+					</Kbd>
+					<VisuallyHidden> {t('component.search-bar.and')} </VisuallyHidden>
+					<Kbd rounded='2px'>K</Kbd>
+					<VisuallyHidden>
+						{' '}
+						{t('component.search-bar.to-search')}
+					</VisuallyHidden>
+				</HStack>
+			</HStack>
+		</chakra.button>
+	)
+}
+
+function OmniSearch(props: HTMLChakraProps<'button'>) {
   const router = useRouter()
   const [query, setQuery] = React.useState('')
   const [active, setActive] = React.useState(0)
@@ -231,7 +301,7 @@ function OmniSearch() {
 
   return (
     <>
-      <SearchButton onClick={modal.onOpen} />
+      <SearchButton {...props} onClick={modal.onOpen} />
       <Modal
         scrollBehavior='inside'
         isOpen={modal.isOpen}

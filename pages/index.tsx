@@ -24,9 +24,9 @@ import * as React from 'react'
 import { AiFillThunderbolt } from 'react-icons/ai'
 import { DiGithubBadge } from 'react-icons/di'
 import { FaArrowRight, FaDiscord, FaMicrophone } from 'react-icons/fa'
-import { FiDownload, FiGithub, FiUsers } from 'react-icons/fi'
+import { FiBookOpen, FiGithub, FiUsers } from 'react-icons/fi'
 import { IoMdMoon } from 'react-icons/io'
-import { MdAccessibility, MdGrain, MdPalette } from 'react-icons/md'
+import { MdOutlineViewInAr, MdOutlineDirectionsBoat, MdBook, MdOndemandVideo, MdUpdate } from 'react-icons/md'
 import users from 'chakra-users'
 import ChakraNextImage from 'components/chakra-next-image'
 import { AdBanner } from 'components/chakra-pro/ad-banner'
@@ -41,7 +41,7 @@ import ShowcaseSection from 'components/showcase/showcase-section'
 import TweetCard from 'components/tweet-card'
 import { App, Index } from 'configs/sandpack-contents/homepage/files'
 import tweets from 'configs/tweets.json'
-import type { Member, Sponsor } from 'src/types/github'
+import type { Member } from 'src/types/github'
 import { getAllContributors } from 'utils/get-all-contributors'
 import { getAllMembers } from 'utils/get-all-members'
 import { getAllSponsors } from 'utils/get-all-sponsors'
@@ -49,8 +49,8 @@ import { getDiscordMembers } from 'utils/get-discord-members'
 import { getGithubStars } from 'utils/get-github-stars'
 import { getNpmDownloads } from 'utils/get-npm-downloads'
 import { t } from 'utils/i18n'
-
-const openCollectiveLink = 'https://opencollective.com/chakra-ui'
+import siteConfig from 'configs/site-config.json'
+import ShowcaseAnimation from 'components/showcase-animation'
 
 const Feature = ({ title, icon, children, ...props }) => {
   return (
@@ -80,15 +80,6 @@ const Feature = ({ title, icon, children, ...props }) => {
       </Text>
     </Box>
   )
-}
-
-interface Tweet {
-  content: string
-  handle: string
-  name: string
-  date: string
-  image: string
-  url: string
 }
 
 interface StatBoxProps extends BoxProps {
@@ -122,19 +113,12 @@ const StatBox = (props: StatBoxProps) => {
 interface HomePageProps {
   members: Member[]
   githubStars: string
-  npmDownloads: string
   discordMembers: string
-  sponsors: {
-    companies: Sponsor[]
-    individuals: Sponsor[]
-  }
 }
 
 const HomePage = ({
   members,
-  sponsors,
   githubStars,
-  npmDownloads,
   discordMembers,
 }: HomePageProps) => {
   return (
@@ -143,10 +127,9 @@ const HomePage = ({
         title={t('homepage.seo.title')}
         description={t('homepage.seo.description')}
       />
-      <AdBanner />
       <Header />
-      <Box mb={20}>
-        <Box as='section' pt='6rem' pb={{ base: '0', md: '5rem' }}>
+      <Box mb={5}>
+        <Box mb={60} as='section' pt='6rem' pb={{ base: '0', md: '5rem' }}>
           <Container>
             <Box textAlign='center'>
               <chakra.h1
@@ -160,11 +143,24 @@ const HomePage = ({
                 lineHeight='1.2'
               >
                 {t('homepage.title.main')}
-                <Box as='span' color='teal.500' _dark={{ color: 'teal.300' }}>
-                  {' '}
-                  {t('homepage.title.highlighted')}
-                </Box>
               </chakra.h1>
+
+							<chakra.h1
+							  maxW='50ch'
+								mx='auto'
+								fontSize={{ base: '1.25rem', sm: '2rem', lg: '2.5rem' }}
+								fontFamily='heading'
+								letterSpacing='tighter'
+								fontWeight='extrabold'
+								mb='16px'
+								lineHeight='1.2'
+							>
+								{t('homepage.title.highlighted')}
+								<Box as='span' color='teal.500' _dark={{ color: 'teal.300' }}>
+                  {' '}
+                  For Stormworks
+                </Box>
+							</chakra.h1>
 
               <Text
                 maxW='560px'
@@ -193,7 +189,7 @@ const HomePage = ({
                     colorScheme='teal'
                     rightIcon={<FaArrowRight fontSize='0.8em' />}
                   >
-                    {t('homepage.get-started')}
+                    {t('homepage.browse-wiki')}
                   </Button>
                 </NextLink>
                 <Button
@@ -202,7 +198,7 @@ const HomePage = ({
                   h='4rem'
                   px='40px'
                   fontSize='1.2rem'
-                  href='https://github.com/chakra-ui/chakra-ui/'
+                  href='https://github.com/THE-SIMPLE-MARK/Stormworks-Wiki/'
                   target='__blank'
                   leftIcon={<DiGithubBadge size='1.5em' />}
                 >
@@ -211,122 +207,25 @@ const HomePage = ({
               </Stack>
             </Box>
 
-            <Center>
-              <Box
-                display='inline-block'
-                mt='70px'
-                rounded='xl'
-                bg='green.50'
-                shadow='base'
-                px='6'
-                py='4'
-              >
-                <ChakraNextImage
-                  height={55}
-                  width={240}
-                  src='/git-nation-badge.png'
-                  alt='Git Nations Award for the most impactful project to the community'
-                />
-              </Box>
-            </Center>
           </Container>
         </Box>
 
         <Divider />
 
-        <Box as='section' pt='48px' pb='32px'>
-          <Container textAlign='center'>
-            <chakra.p
-              fontWeight='500'
-              textStyle='caps'
-              color='teal.600'
-              _dark={{ color: 'teal.300' }}
-              mb='48px'
-            >
-              {t('homepage.supported-and-backed-by')}
-            </chakra.p>
-            <Wrap
-              maxW='800px'
-              mx='auto'
-              justify='center'
-              align='center'
-              spacing='24px'
-            >
-              {users
-                .filter((user) => user.image.includes('.'))
-                .slice(0, 7)
-                .map((user) => (
-                  <WrapItem key={user.name} bg='white' rounded='md'>
-                    <Link href={user.url}>
-                      <ChakraNextImage
-                        src={user.image}
-                        alt={user.name}
-                        width={120}
-                        height={24}
-                        p='5'
-                        loading='lazy'
-                      />
-                    </Link>
-                  </WrapItem>
-                ))}
-              <WrapItem>
-                <Button
-                  as='a'
-                  w='40'
-                  h='16'
-                  href={`${openCollectiveLink}/contribute`}
-                  rel='noopener'
-                  target='_blank'
-                  border='1px dashed'
-                  borderColor='teal.200'
-                  bg='teal.50'
-                  _hover={{ bg: 'teal.100' }}
-                  _dark={{
-                    borderColor: 'teal.500',
-                    bg: 'whiteAlpha.200',
-                    _hover: { bg: 'whiteAlpha.300' },
-                  }}
-                  rounded='md'
-                >
-                  <Box as='span' mr='1' role='img'>
-                    💖
-                  </Box>{' '}
-                  {t('homepage.your-company')}
-                </Button>
-              </WrapItem>
-            </Wrap>
-          </Container>
-        </Box>
-
         <Box as='section'>
           <Container py='80px'>
-            <Box mb='3em' textAlign='center'>
+            <Box textAlign='center'>
               <chakra.h2 textStyle='heading'>
-                {t('homepage.less-code-more-speed')}
+                {t('homepage.less-searching-more-speed')}
               </chakra.h2>
               <Text opacity={0.7} fontSize='lg' mt='3' mx='auto' maxW='600px'>
-                {t('homepage.less-code-description')}
+                {t('homepage.less-searching-description')}
               </Text>
-            </Box>
-            <Box
-              maxW='7xl'
-              mx='auto'
-              mb='-300px'
-              px={{ base: '4', md: 0 }}
-              position='relative'
-            >
-              <SandpackEmbed
-                files={{
-                  '/App.tsx': App,
-                  '/index.tsx': Index,
-                }}
-                isHorizontal
-              />
             </Box>
           </Container>
         </Box>
 
-        <Box as='section' pt='240px' bg='gray.50' _dark={{ bg: 'gray.900' }}>
+        <Box as='section' bg='gray.50' _dark={{ bg: 'gray.900' }}>
           <Container py='120px' maxW='1280px'>
             <Box maxW='760px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading' mb='5'>
@@ -342,34 +241,34 @@ const HomePage = ({
               px={{ md: 12 }}
             >
               <Feature
-                icon={MdAccessibility}
-                title={t('homepage.feature-section.accessible.title')}
+                icon={MdOutlineViewInAr}
+                title={t('homepage.feature-section.components.title')}
               >
-                {t('homepage.feature-section.accessible.description')}
+                {t('homepage.feature-section.components.description')}
               </Feature>
               <Feature
-                icon={MdPalette}
-                title={t('homepage.feature-section.themeable.title')}
+                icon={MdBook}
+                title={t('homepage.feature-section.standards.title')}
               >
-                {t('homepage.feature-section.themeable.description')}
+                {t('homepage.feature-section.standards.description')}
               </Feature>
               <Feature
-                icon={MdGrain}
-                title={t('homepage.feature-section.composable.title')}
+                icon={MdOutlineDirectionsBoat}
+                title={t('homepage.feature-section.game-mechanics.title')}
               >
-                {t('homepage.feature-section.composable.description')}
+                {t('homepage.feature-section.game-mechanics.description')}
               </Feature>
               <Feature
-                icon={IoMdMoon}
-                title={t('homepage.feature-section.light-and-dark-ui.title')}
+                icon={MdOndemandVideo}
+                title={t('homepage.feature-section.tutorials.title')}
               >
-                {t('homepage.feature-section.light-and-dark-ui.description')}
+                {t('homepage.feature-section.tutorials.description')}
               </Feature>
               <Feature
-                icon={AiFillThunderbolt}
-                title={t('homepage.feature-section.developer-experience.title')}
+                icon={MdUpdate}
+                title={t('homepage.feature-section.continous-updates.title')}
               >
-                {t('homepage.feature-section.developer-experience.description')}
+                {t('homepage.feature-section.continous-updates.description')}
               </Feature>
               <Feature
                 icon={FaDiscord}
@@ -381,11 +280,10 @@ const HomePage = ({
           </Container>
         </Box>
 
-        <ShowcaseSection />
 
         <Box as='section' bg='teal.500'>
           <Container py='7.5rem' maxW='1280px' color='white'>
-            <Box maxW='760px' mx='auto' textAlign='center' mb='56px'>
+            <Box maxW='770px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading' mb='5'>
                 {t('homepage.growing-section.title')}
               </chakra.h2>
@@ -401,9 +299,9 @@ const HomePage = ({
               px={{ md: 12 }}
             >
               <StatBox
-                icon={FiDownload}
-                title={npmDownloads}
-                description={t('homepage.growing-section.downloads-per-month')}
+                icon={FiBookOpen}
+                title={"23K"}
+                description={t('homepage.growing-section.views-per-month')}
               />
               <StatBox
                 icon={FiGithub}
@@ -413,7 +311,7 @@ const HomePage = ({
               <StatBox
                 icon={FiUsers}
                 title={members.length.toString()}
-                description={t('homepage.growing-section.core-contributors')}
+                description={t('homepage.growing-section.contributors')}
               />
               <StatBox
                 icon={FaDiscord}
@@ -421,32 +319,10 @@ const HomePage = ({
                 description={t('homepage.growing-section.discord-members')}
               />
             </SimpleGrid>
-
-            <Box mt='5rem' textAlign='center'>
-              <chakra.p mb='48px' textStyle='caps'>
-                {t('homepage.growing-section.chakra-heroes')}
-              </chakra.p>
-              <Wrap spacing='4' justify='center' maxW='660px' mx='auto'>
-                {members.map((i) => (
-                  <WrapItem key={i.login}>
-                    <Link href={i.url}>
-                      <ChakraNextImage
-                        alt={i.name}
-                        src={i.avatar_url}
-                        width={80}
-                        height={80}
-                        rounded='full'
-                        loading='lazy'
-                      />
-                    </Link>
-                  </WrapItem>
-                ))}
-              </Wrap>
-            </Box>
           </Container>
         </Box>
 
-        <Box>
+{/*         <Box>
           <Container py='120px' maxW='1200px' px='32px'>
             <chakra.h2 textStyle='heading-2' mb='48px'>
               {t('homepage.loved-by-product-people-section.title')}
@@ -461,9 +337,9 @@ const HomePage = ({
               ))}
             </SimpleGrid>
           </Container>
-        </Box>
+        </Box> */}
 
-        <Box bg='teal.500'>
+{/*         <Box bg='teal.500'> 
           <Container py='120px' maxW='1200px' px='32px' color='white'>
             <Box maxW='560px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading-2' mb='4'>
@@ -518,7 +394,7 @@ const HomePage = ({
                   as='a'
                   minW='7rem'
                   colorScheme='teal'
-                  href={openCollectiveLink}
+                  href={siteConfig.openCollective.url}
                   rel='noopener'
                   target='_blank'
                 >
@@ -574,111 +450,17 @@ const HomePage = ({
                   as='a'
                   minW='7rem'
                   colorScheme='teal'
-                  href='https://www.patreon.com/segunadebayo'
+                  href={siteConfig.patreon.url}
                   rel='noopener'
                   target='_blank'
+									cursor='default'
                 >
                   Sponsor
                 </Button>
               </LightMode>
             </Stack>
-
-            <Box maxW='600px' mx='auto' textAlign='center'>
-              <chakra.p textStyle='caps' mb='8' mt='4rem'>
-                {t('homepage.support-chakra-ui-section.organization-sponsors')}
-              </chakra.p>
-              <Wrap justify='center'>
-                {sponsors.companies.map((i) => (
-                  <WrapItem key={i.MemberId}>
-                    <Circle
-                      size='80px'
-                      bg='white'
-                      shadow='lg'
-                      {...(i.website && {
-                        as: 'a',
-                        href: i.website,
-                        target: '_blank',
-                        rel: 'noopener',
-                      })}
-                    >
-                      <ChakraNextImage
-                        rounded='full'
-                        width={56}
-                        height={56}
-                        alt={i.name}
-                        key={i.MemberId}
-                        src={i.image}
-                        loading='lazy'
-                        cursor={i.website ? 'pointer' : 'auto'}
-                      />
-                    </Circle>
-                  </WrapItem>
-                ))}
-              </Wrap>
-
-              <chakra.p mb='8' mt='4rem' textStyle='caps'>
-                {t('homepage.support-chakra-ui-section.individual-sponsors')}
-              </chakra.p>
-              <Wrap justify='center'>
-                {sponsors.individuals.map((i) => (
-                  <WrapItem key={i.MemberId}>
-                    <Link href={i.profile}>
-                      <ChakraNextImage
-                        src={i.image}
-                        alt={i.name}
-                        width={40}
-                        height={40}
-                        loading='lazy'
-                        rounded='full'
-                      />
-                    </Link>
-                  </WrapItem>
-                ))}
-              </Wrap>
-            </Box>
           </Container>
-        </Box>
-
-        <ChakraProAd />
-
-        <Box
-          bgImage='url(/audio-bar.svg)'
-          bgPos='bottom center'
-          bgSize='120px'
-          bgRepeat='space no-repeat'
-        >
-          <Container
-            pt='7.5rem'
-            pb='10rem'
-            maxW='50rem'
-            mx='auto'
-            textAlign='center'
-          >
-            <Flex direction='column' align='center' maxW='600px' mx='auto'>
-              <Circle size='80px' bg='blackAlpha.200' color='teal.400'>
-                <FaMicrophone size='40px' />
-              </Circle>
-              <chakra.h2 textStyle='heading' mt='6' mb='6'>
-                {t('homepage.event-section.title')}
-              </chakra.h2>
-              <Text mb='40px' fontSize='lg' opacity={0.7}>
-                {t('homepage.event-section.description')}
-              </Text>
-            </Flex>
-            <Button
-              h='4rem'
-              px='40px'
-              fontSize='1.2rem'
-              as='a'
-              href='mailto:sage@adebayosegun.com?subject=Invitation to Speak!'
-              size='lg'
-              colorScheme='teal'
-              rightIcon={<FaArrowRight fontSize='0.8em' />}
-            >
-              {t('homepage.event-section.invite-us-to-speak')}
-            </Button>
-          </Container>
-        </Box>
+        </Box> */}
 
         <DiscordStrip />
 
@@ -691,26 +473,21 @@ const HomePage = ({
 export async function getStaticProps() {
   const [
     { prettyCount: githubStars },
-    { prettyCount: npmDownloads },
     { prettyCount: discordMembers },
   ] = await Promise.all([
     getGithubStars(),
-    getNpmDownloads(),
     getDiscordMembers(),
   ])
 
   const contributors = getAllContributors()
   const members = getAllMembers()
-  const sponsors = getAllSponsors()
 
   return {
     props: {
       githubStars,
       members,
       contributors,
-      sponsors,
       discordMembers,
-      npmDownloads,
     },
   }
 }

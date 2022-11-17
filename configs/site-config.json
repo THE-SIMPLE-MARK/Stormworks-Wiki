@@ -1,16 +1,9 @@
 {
-  "copyright": "Copyright © {{date}} Segun Adebayo. All Rights Reserved.",
-  "algolia": {
-    "apiKey": "df1dcc41f7b8e5d68e73dd56d1e19701",
-    "indexName": "chakra-ui",
-    "inputSelector": "#algolia-search"
-  },
+  "copyright": "Copyright © {{date}} SIMPLE MARK. All Rights Reserved.",
   "author": {
-    "name": "Segun Adebayo",
-    "github": "https://github.com/segunadebayo",
-    "twitter": "https://twitter.com/thesegunadebayo",
-    "linkedin": "https://linkedin.com/in/thesegunadebayo",
-    "email": "sage@adebayosegun.com"
+    "name": "SIMPLE MARK",
+    "github": "https://github.com/THE-SIMPLE-MARK",
+    "email": "simple.mark3941@gmail.com"
   },
   "repo": {
     "url": "https://github.com/chakra-ui/chakra-ui",
@@ -18,16 +11,16 @@
     "blobUrl": "https://github.com/chakra-ui/chakra-ui/blob/main"
   },
   "openCollective": {
-    "url": "https://opencollective.com/chakra-ui"
+    "url": "https://opencollective.com/"
   },
   "discord": {
-    "url": "https://discord.gg/chakra-ui"
+    "url": "https://discord.gg/Wc2xp89Npd"
   },
-  "youtube": "https://www.youtube.com/channel/UC4TmDovH46TB4S0SM0Y4CIg",
+  "youtube": "https://www.youtube.com/",
   "seo": {
-    "title": "Chakra UI",
-    "titleTemplate": "%s - Chakra UI",
-    "description": "Simple, Modular and Accessible UI Components for your React Applications.",
+    "title": "StormWiki",
+    "titleTemplate": "%s - StormWiki",
+    "description": "The Unofficial Wikipedia for Stormworks.",
     "siteUrl": "https://chakra-ui.com",
     "twitter": {
       "handle": "@chakra-ui",
@@ -38,21 +31,21 @@
       "type": "website",
       "locale": "en_US",
       "url": "https://chakra-ui.com",
-      "title": "Chakra UI",
-      "description": "Simple, Modular and Accessible UI Components for your React Applications.",
-      "site_name": "Chakra UI: Simple, Modular and Accessible UI Components for your React Applications.",
+      "title": "StormWiki",
+      "description": "The Unofficial Wikipedia for Stormworks.",
+      "site_name": "The Unofficial Wikipedia for Stormworks.",
       "images": [
         {
           "url": "https://chakra-ui.com/og-image.png",
           "width": 1240,
           "height": 480,
-          "alt": "Chakra UI: Simple, Modular and Accessible UI Components for your React Applications."
+          "alt": "The Unofficial Wikipedia for Stormworks."
         },
         {
           "url": "https://chakra-ui.com/twitter-og-image.png",
           "width": 1012,
           "height": 506,
-          "alt": "Chakra UI: Simple, Modular and Accessible UI Components for your React Applications."
+          "alt": "The Unofficial Wikipedia for Stormworks."
         }
       ]
     }

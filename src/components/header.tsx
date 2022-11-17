@@ -39,10 +39,10 @@ function HeaderContent() {
 
   return (
     <>
-      <Flex w='100%' h='100%' px='6' align='center' justify='space-between'>
+      <Flex className="cont" w='100%' h='100%' px='6' align='center' justify='space-between'>
         <Flex align='center'>
           <NextLink href='/' passHref>
-            <chakra.a display='block' aria-label='Chakra UI, Back to homepage'>
+            <chakra.a display='block' aria-label='StormWiki, Back to homepage'>
               <Logo display={{ base: 'none', md: 'block' }} />
               <Box minW='3rem' display={{ base: 'block', md: 'none' }}>
                 <LogoIcon />
@@ -51,23 +51,18 @@ function HeaderContent() {
           </NextLink>
         </Flex>
 
+				<Search maxW="600px" className="search" />
+
         <Flex
           justify='flex-end'
-          w='100%'
           align='center'
           color='gray.400'
           maxW='1100px'
         >
-          <Search />
-          <VersionSwitcher
-            width='auto'
-            flexShrink={0}
-            display={{ base: 'none', md: 'flex' }}
-          />
           <HStack spacing='5' display={{ base: 'none', md: 'flex' }}>
             <Link
               isExternal
-              aria-label='Go to Chakra UI GitHub page'
+              aria-label='Go to StormWiki GitHub page'
               href={siteConfig.repo.url}
             >
               <Icon
@@ -79,7 +74,7 @@ function HeaderContent() {
                 _hover={{ color: 'gray.600' }}
               />
             </Link>
-            <Link aria-label='Go to Chakra UI Discord page' href='/discord'>
+            <Link aria-label='Go to StormWiki Discord server' href='/discord'>
               <Icon
                 as={DiscordIcon}
                 display='block'
@@ -91,7 +86,7 @@ function HeaderContent() {
             </Link>
             <Link
               isExternal
-              aria-label='Go to Chakra UI YouTube channel'
+              aria-label='Go to StormWiki YouTube channel'
               href={siteConfig.youtube}
             >
               <Icon
@@ -115,7 +110,9 @@ function HeaderContent() {
               onClick={toggleMode}
               icon={<SwitchIcon />}
             />
-            <SponsorButton ml='5' />
+
+            {/* <SponsorButton ml='5' /> */}
+
             <MobileNavButton
               ref={mobileNavBtnRef}
               aria-label='Open Menu'

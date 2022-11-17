@@ -31,52 +31,29 @@ const links = [
   {
     icon: DiGithubBadge,
     label: 'GitHub',
-    href: 'https://github.com/segunadebayo',
-  },
-  {
-    icon: IoLogoTwitter,
-    label: 'Twitter',
-    href: 'https://twitter.com/thesegunadebayo',
-  },
-  {
-    icon: IoLogoLinkedin,
-    label: 'LinkedIn',
-    href: 'https://linkedin.com/in/thesegunadebayo/',
+    href: 'https://github.com/THE-SIMPLE-MARK',
   },
   {
     icon: MdEmail,
     label: 'Email',
-    href: 'mailto:sage@adebayosegun.com',
-  },
-  {
-    icon: FaYoutube,
-    label: 'YouTube',
-    href: 'https://www.youtube.com/channel/UC4TmDovH46TB4S0SM0Y4CIg',
+    href: 'mailto:simple.mark3941@gmail.com',
   },
 ]
 
-const NigeriaFlag = (props) => (
+const HungaryFlag = (props) => (
   <chakra.svg
     display='inline-block'
     mx='3'
     h='16px'
     w='auto'
-    viewBox='0 0 48 48'
+    viewBox='0 0 36 36'
     verticalAlign='middle'
     {...props}
   >
     <title>{t('component.footer.title')}</title>
-    <g>
-      <rect x='16' y='6' fill='#E6E6E6' width='16' height='36'></rect>{' '}
-      <path
-        fill='#078754'
-        d='M48,40c0,1.105-0.895,2-2,2H32V6h14c1.105,0,2,0.895,2,2V40z'
-      />
-      <path
-        fill='#078754'
-        d='M16,42H2c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h14V42z'
-      />
-    </g>
+		<path fill="#EEE" d="M0 14h36v8H0z"/>
+		<path fill="#CD2A3E" d="M32 5H4C1.791 5 0 6.791 0 9v5h36V9c0-2.209-1.791-4-4-4z"/>
+		<path fill="#436F4D" d="M4 31h28c2.209 0 4-1.791 4-4v-5H0v5c0 2.209 1.791 4 4 4z"/>
   </chakra.svg>
 )
 
@@ -85,9 +62,9 @@ export const Footer = (props: StackProps) => (
     <Text fontSize='sm'>
       <span>
         {t('component.footer.proudly-made-in')}
-        <NigeriaFlag />
+        <HungaryFlag />
       </span>
-      <span>by Segun Adebayo</span>
+      <span>by SIMPLE MARK</span>
     </Text>
     <Stack mt={4} direction='row' spacing='12px' justify='center'>
       {links.map((link) => (

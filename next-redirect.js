@@ -1,8 +1,10 @@
+import siteConfig from 'configs/site-config.json'
+
 async function redirect() {
   return [
     {
       source: '/discord',
-      destination: 'https://discord.gg/chakra-ui',
+      destination: siteConfig.discord.url,
       permanent: true,
     },
     // GENERAL

@@ -1,72 +1,61 @@
 {
   "homepage": {
     "title": {
-      "main": "Create accessible React apps",
-      "highlighted": "with speed"
+      "main": "StormWiki",
+      "highlighted": "The Unofficial Wiki"
     },
-    "message": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
-    "get-started": "Get Started",
+    "message": "StormWiki is a well-maintained open-source wikipedia for Stormworks. This wiki has documentation on main features, standards and more!",
+    "browse-wiki": "Read Wikipedia",
     "supported-and-backed-by": "Supported and Backed by",
     "your-company": "Your company",
-    "less-code-more-speed": "Less code. More speed",
-    "less-code-description": "Spend less time writing UI code and more time building a great experience for your customers.",
+    "less-searching-more-speed": "Less searching. More speed",
+    "less-searching-description": "Spend less time searching for documentation and more time building creations.",
     "feature-section": {
-      "title": "An experience you'd expect from a design system",
+      "title": "Everything you'd expect from a Stormworks knowledge base",
       "description": "Opinionated and designed for daily use.",
-      "accessible": {
-        "title": "Accessible",
-        "description": "Chakra UI strictly follows WAI-ARIA standards for all components."
+      "components": {
+        "title": "Components",
+        "description": "Information and advanced tutorials for every component in the game."
       },
-      "themeable": {
-        "title": "Themeable",
-        "description": "Customize any part of our components to match your design needs."
+      "standards": {
+        "title": "Standards",
+        "description": "Implementation guides and info for every widely used community-made standard."
       },
-      "composable": {
-        "title": "Composable",
-        "description": "Designed with composition in mind. Compose new components with ease."
+      "game-mechanics": {
+        "title": "Game Mechanics",
+        "description": "Documentation for game mechanics, like the weight system."
       },
-      "light-and-dark-ui": {
-        "title": "Light and Dark UI",
-        "description": "Optimized for multiple color modes. Use light or dark, your choice."
+      "tutorials": {
+        "title": "Tutorials",
+        "description": "Quality tutorials made by Stormworks YouTubers all in one place."
       },
-      "developer-experience": {
-        "title": "Developer Experience",
-        "description": "Guaranteed to boost your productivity when building your app or website."
+      "continous-updates": {
+        "title": "Continous Updates",
+        "description": "This wiki is continously updated for every future release of Stormworks."
       },
       "active-community": {
         "title": "Active Community",
-        "description": "We're a team of active maintainers ready to help you whenever you need."
+        "description": "We're a team of active Stormworkers ready to help you whenever you need."
       }
     },
-    "built-with-chakra-section": {
-      "title": "Built with Chakra UI ⚡️",
-      "description": "Your project can look as good as these! Check them out, get inspired!",
-      "see-showcase": "See showcase"
-    },
     "growing-section": {
-      "title": "Chakra is growing quickly",
-      "description": "We're dedicated to improving the experience and performance of Chakra UI.",
-      "downloads-per-month": "Downloads per month",
+      "title": "StormWiki is growing quickly",
+      "description": "We're dedicated to improving the experience and performance of StormWiki.",
+      "views-per-month": "Views per month",
       "github-stars": "Github stars",
-      "core-contributors": "Core contributors",
-      "discord-members": "Discord members",
-      "chakra-heroes": "Chakra Heroes 🥇"
+      "contributors": "Contributors",
+      "discord-members": "Discord members"
     },
     "loved-by-product-people-section": {
       "title": "Loved by product people like you"
     },
-    "support-chakra-ui-section": {
-      "title": "Support Chakra UI 💖",
-      "description": "Our maintainers devote their time, effort, and heart to ensure Chakra UI keeps getting better. Support us by donating to our collective 🙏",
-      "sponsor-the-chakra-ui-maintainers": "Sponsor the Chakra UI maintainers",
-      "sponsor-the-creator": "Sponsor the creator, Segun Adebayo",
+    "support-section": {
+      "title": "Support StormWiki 💖",
+      "description": "Our maintainers devote their time, effort, and heart to ensure StormWiki keeps getting better. Support us by donating to our collective 🙏",
+      "sponsor-the-maintainers": "Sponsor the StormWiki maintainers",
+      "sponsor-the-creator": "Sponsor the creator, PirateJake2000",
       "organization-sponsors": "Organization Sponsors 🏦",
       "individual-sponsors": "Individual Sponsors 🥇"
-    },
-    "event-section": {
-      "title": "Invite us to speak at your next event",
-      "description": "Want a Chakra UI core team member to speak at your next event? Invite us to create a memorable and engaging experience for your attendees.",
-      "invite-us-to-speak": "Invite us to speak"
     },
     "seo": {
       "title": "Chakra UI - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
@@ -77,7 +66,7 @@
     "title": "404: Not found",
     "description": "Page not found",
     "heading": "404 | Page Not Found",
-    "message": "You just hit a route that doesn't exist... the sadness.😢",
+    "message": "This page doesn't exist... the sadness.😢",
     "back-to-home": "Back to Home"
   },
   "tutorialError": {
@@ -168,7 +157,7 @@
         "view-video": "Video"
       }
     },
-    "algolia-search": {
+    "search-bar": {
       "search-the-docs": "Search the docs",
       "press": "Press",
       "and": "and",
@@ -177,13 +166,13 @@
     "discord-strip": {
       "heading": "Connect with the community",
       "description": "Feel free to ask questions, report issues, and meet new people.",
-      "join-the-chakra-discord": "Join the #Chakra Discord!"
+      "join-the-discord": "Join the #StormWiki Discord!"
     },
     "edit-page-button": {
       "edit-this-page": "Edit this page on GitHub"
     },
     "footer": {
-      "title": "Nigeria",
+      "title": "Hungary",
       "proudly-made-in": "Proudly made in"
     },
     "page-container": {
