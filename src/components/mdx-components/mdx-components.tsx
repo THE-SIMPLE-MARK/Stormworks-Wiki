@@ -1,7 +1,6 @@
 import * as Chakra from '@chakra-ui/react'
 import * as React from 'react'
 import PropsTable from '../props-table'
-import CarbonAd from './carbon-ad'
 import CodeBlock from './codeblock/codeblock'
 import ComponentLinks from './component-links'
 import { FeaturesCourses } from './course-banner'
@@ -97,7 +96,6 @@ export const MDXComponents = {
       {...props}
     />
   ),
-  'carbon-ad': CarbonAd,
   ComponentLinks,
   IconsList,
   PropsTable,

@@ -2,55 +2,32 @@ import {
   Box,
   BoxProps,
   Button,
-  Center,
-  Circle,
   Divider,
   Flex,
   Grid,
   Heading,
   Icon,
-  LightMode,
-  Link,
   SimpleGrid,
   Stack,
   Text,
-  Wrap,
-  WrapItem,
   chakra,
 } from '@chakra-ui/react'
-import { chunk } from '@chakra-ui/utils'
 import NextLink from 'next/link'
 import * as React from 'react'
-import { AiFillThunderbolt } from 'react-icons/ai'
 import { DiGithubBadge } from 'react-icons/di'
-import { FaArrowRight, FaDiscord, FaMicrophone } from 'react-icons/fa'
+import { FaArrowRight, FaDiscord } from 'react-icons/fa'
 import { FiBookOpen, FiGithub, FiUsers } from 'react-icons/fi'
-import { IoMdMoon } from 'react-icons/io'
 import { MdOutlineViewInAr, MdOutlineDirectionsBoat, MdBook, MdOndemandVideo, MdUpdate } from 'react-icons/md'
-import users from 'chakra-users'
-import ChakraNextImage from 'components/chakra-next-image'
-import { AdBanner } from 'components/chakra-pro/ad-banner'
-import { ChakraProAd } from 'components/chakra-pro/home-page-ad'
 import Container from 'components/container'
 import { DiscordStrip } from 'components/discord-strip'
 import { Footer } from 'components/footer'
 import Header from 'components/header'
-import SandpackEmbed from 'components/sandpack-embed'
 import SEO from 'components/seo'
-import ShowcaseSection from 'components/showcase/showcase-section'
-import TweetCard from 'components/tweet-card'
-import { App, Index } from 'configs/sandpack-contents/homepage/files'
-import tweets from 'configs/tweets.json'
-import type { Member } from 'src/types/github'
+import type { Contributor } from 'utils/get-all-contributors'
 import { getAllContributors } from 'utils/get-all-contributors'
-import { getAllMembers } from 'utils/get-all-members'
-import { getAllSponsors } from 'utils/get-all-sponsors'
 import { getDiscordMembers } from 'utils/get-discord-members'
 import { getGithubStars } from 'utils/get-github-stars'
-import { getNpmDownloads } from 'utils/get-npm-downloads'
 import { t } from 'utils/i18n'
-import siteConfig from 'configs/site-config.json'
-import ShowcaseAnimation from 'components/showcase-animation'
 
 const Feature = ({ title, icon, children, ...props }) => {
   return (
@@ -111,13 +88,13 @@ const StatBox = (props: StatBoxProps) => {
 }
 
 interface HomePageProps {
-  members: Member[]
+  contributors: Contributor[]
   githubStars: string
   discordMembers: string
 }
 
 const HomePage = ({
-  members,
+  contributors,
   githubStars,
   discordMembers,
 }: HomePageProps) => {
@@ -310,7 +287,7 @@ const HomePage = ({
               />
               <StatBox
                 icon={FiUsers}
-                title={members.length.toString()}
+                title={contributors.length.toString()}
                 description={t('homepage.growing-section.contributors')}
               />
               <StatBox
@@ -321,23 +298,6 @@ const HomePage = ({
             </SimpleGrid>
           </Container>
         </Box>
-
-{/*         <Box>
-          <Container py='120px' maxW='1200px' px='32px'>
-            <chakra.h2 textStyle='heading-2' mb='48px'>
-              {t('homepage.loved-by-product-people-section.title')}
-            </chakra.h2>
-            <SimpleGrid spacing='32px' columns={{ base: 1, md: 3 }}>
-              {chunk(tweets.tweets, 3).map((tweetList, idx) => (
-                <Stack spacing='6' key={idx}>
-                  {tweetList.map((tweet: Tweet, idx) => (
-                    <TweetCard key={idx} {...tweet} />
-                  ))}
-                </Stack>
-              ))}
-            </SimpleGrid>
-          </Container>
-        </Box> */}
 
 {/*         <Box bg='teal.500'> 
           <Container py='120px' maxW='1200px' px='32px' color='white'>
@@ -480,12 +440,10 @@ export async function getStaticProps() {
   ])
 
   const contributors = getAllContributors()
-  const members = getAllMembers()
 
   return {
     props: {
       githubStars,
-      members,
       contributors,
       discordMembers,
     },

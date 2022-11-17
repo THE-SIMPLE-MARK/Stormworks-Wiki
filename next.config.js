@@ -13,6 +13,7 @@ module.exports = withContentlayer({
       'avatars2.githubusercontent.com',
       'avatars3.githubusercontent.com',
       'res.cloudinary.com',
+			'cdn.discordapp.com'
     ],
   },
   productionBrowserSourceMaps: true,

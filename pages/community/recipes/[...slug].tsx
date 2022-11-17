@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { allRecipes } from 'contentlayer/generated'
 import { GetStaticPaths, InferGetStaticPropsType } from 'next'
 import { useMDXComponent } from 'next-contentlayer/hooks'
@@ -11,6 +13,8 @@ export default function Page({
   const Component = useMDXComponent(doc.body.code)
   return (
     <MDXLayout frontmatter={doc.frontMatter}>
+			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore */}
       <Component components={MDXComponents} />
     </MDXLayout>
   )

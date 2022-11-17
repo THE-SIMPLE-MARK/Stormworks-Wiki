@@ -1,9 +1,17 @@
 import path from 'path'
 import fs from 'fs'
 
+
+export interface Contributor {
+	login: string,
+	name: string,
+	avatar_url: string,
+	profile: string,
+	contributions: string[]
+}
+
 /**
  * Read contributors from `.all-contributorsrc` file
- * to avoid overfetching from Github
  */
 export function getAllContributors() {
   const contributorsRcPath = path.resolve('.all-contributorsrc')

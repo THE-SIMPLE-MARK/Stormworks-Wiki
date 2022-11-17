@@ -1,10 +1,8 @@
-import siteConfig from 'configs/site-config.json'
-
 async function redirect() {
   return [
     {
       source: '/discord',
-      destination: siteConfig.discord.url,
+      destination: "https://discord.gg/",
       permanent: true,
     },
     // GENERAL
