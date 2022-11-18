@@ -19,7 +19,7 @@ export const PaginationLink = (props) => {
         <Text fontSize='sm' px='2'>
           {label}
         </Text>
-        <Text mt='1' fontSize='lg' fontWeight='bold' color='teal.400'>
+        <Text mt='1' fontSize='lg' fontWeight='bold' color='blue.400'>
           {children}
         </Text>
       </Link>

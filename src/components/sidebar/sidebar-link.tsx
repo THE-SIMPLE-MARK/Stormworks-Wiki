@@ -22,7 +22,7 @@ const StyledLink = forwardRef(function StyledLink(
       color='fg'
       transition='all 0.2s'
       _activeLink={{
-        bg: useColorModeValue('teal.50', 'rgba(48, 140, 122, 0.3)'),
+        bg: useColorModeValue('blue.50', 'rgba(48, 140, 122, 0.3)'),
         color: 'accent-emphasis',
         fontWeight: '600',
       }}

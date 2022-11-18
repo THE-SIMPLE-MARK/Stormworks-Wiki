@@ -10,8 +10,8 @@ export default function HackathonBanner() {
     >
       <LinkBox
         as='article'
-        bg='teal.100'
-        color='teal.700'
+        bg='blue.100'
+        color='blue.700'
         px={4}
         py={1}
         rounded='md'

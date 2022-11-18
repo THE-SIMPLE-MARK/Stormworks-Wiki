@@ -107,7 +107,7 @@ function TutorialContainer({
                   </Text>
                   <Button
                     aria-label='Reload'
-                    colorScheme='teal'
+                    colorScheme='blue'
                     size='lg'
                     onClick={() => window.location.reload()}
                   >

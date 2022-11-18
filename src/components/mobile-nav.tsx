@@ -45,11 +45,11 @@ function NavLink({ href, children }: NavLinkProps) {
         rounded='md'
         transition='0.2s all'
         fontWeight={isActive ? 'semibold' : 'medium'}
-        bg={isActive ? 'teal.400' : undefined}
+        bg={isActive ? 'blue.400' : undefined}
         borderWidth={isActive ? undefined : '1px'}
         color={isActive ? 'white' : undefined}
         _hover={{
-          bg: isActive ? 'teal.500' : bgActiveHoverColor,
+          bg: isActive ? 'blue.500' : bgActiveHoverColor,
         }}
       >
         {children}
@@ -117,7 +117,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
             >
               <Box>
                 <Flex justify='space-between' px='6' pt='5' pb='4'>
-                  <Logo sx={{ rect: { fill: 'teal.300' } }} />
+                  <Logo sx={{ rect: { fill: 'blue.300' } }} />
                   <HStack spacing='5'>
                     <SponsorButton display='flex' />
                     <CloseButton ref={closeBtnRef} onClick={onClose} />

@@ -220,7 +220,7 @@ const SearchStyle = () => (
       }
 
       .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-path {
-        color: ${theme.colors.teal['200']};
+        color: ${theme.colors.blue['200']};
       }
 
       .DocSearch-Dropdown ul {
@@ -282,7 +282,7 @@ const SearchStyle = () => (
       }
 
       .DocSearch-Hit[aria-selected='true'] > a {
-        background: ${theme.colors.teal['500']};
+        background: ${theme.colors.blue['500']};
       }
 
       .DocSearch-Hit + .DocSearch-Hit {
@@ -340,7 +340,7 @@ const SearchStyle = () => (
 
       .DocSearch-Hits mark {
         background: none;
-        color: ${theme.colors.teal['500']};
+        color: ${theme.colors.blue['500']};
       }
 
       .DocSearch-Hit[aria-selected='true'] mark {
@@ -374,7 +374,7 @@ const SearchStyle = () => (
       }
 
       .DocSearch-Logo svg {
-        color: ${theme.colors.teal['500']};
+        color: ${theme.colors.blue['500']};
         margin-left: 0.5rem;
       }
 
@@ -443,9 +443,9 @@ const SearchStyle = () => (
 
       .DocSearch-NoResults-Prefill-List button {
         font-weight: 500;
-        color: ${theme.colors.teal['600']};
+        color: ${theme.colors.blue['600']};
         .chakra-ui-dark & {
-          color: ${theme.colors.teal['400']};
+          color: ${theme.colors.blue['400']};
         }
       }
 
@@ -456,11 +456,11 @@ const SearchStyle = () => (
       }
 
       .DocSearch-NoResults-Prefill-List + .DocSearch-Help a {
-        color: ${theme.colors.teal['600']};
+        color: ${theme.colors.blue['600']};
         font-weight: 500;
 
         .chakra-ui-dark & {
-          color: ${theme.colors.teal['300']};
+          color: ${theme.colors.blue['300']};
         }
       }
     `}

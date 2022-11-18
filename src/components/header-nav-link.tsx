@@ -24,7 +24,7 @@ function NavLink(props: HTMLChakraProps<'a'>) {
         _hover={{ bg: useColorModeValue('gray.100', 'whiteAlpha.100') }}
         _activeLink={{
           fontWeight: 'semibold',
-          color: 'teal.500',
+          color: 'blue.500',
         }}
         {...rest}
       />

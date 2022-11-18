@@ -38,7 +38,7 @@ function Member(props: { member: IMember }) {
 								as={FaDiscord}
 								w={5}
 								h={5}
-								color='teal.300'
+								color='blue.300'
 							/>
 				      <Text fontSize='sm' color='fg-muted'>
           			{discordUsername}

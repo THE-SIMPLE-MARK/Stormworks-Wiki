@@ -85,7 +85,7 @@ function PageContainer(props: PageContainerProps) {
                       {convertBackticksToInlineCode(title)}
                     </chakra.h1>
                     {version && (
-                      <Badge colorScheme='teal' letterSpacing='wider'>
+                      <Badge colorScheme='blue' letterSpacing='wider'>
                         v{version}
                       </Badge>
                     )}

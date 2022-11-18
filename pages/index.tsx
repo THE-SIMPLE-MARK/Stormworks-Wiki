@@ -43,7 +43,7 @@ const Feature = ({ title, icon, children, ...props }) => {
         rounded='full'
         w='12'
         h='12'
-        bg='teal.500'
+        bg='blue.500'
         align='center'
         justify='center'
       >
@@ -133,7 +133,7 @@ const HomePage = ({
 								lineHeight='1.2'
 							>
 								{t('homepage.title.highlighted')}
-								<Box as='span' color='teal.500' _dark={{ color: 'teal.300' }}>
+								<Box as='span' color='blue.500' _dark={{ color: 'blue.300' }}>
                   {' '}
                   For Stormworks
                 </Box>
@@ -163,7 +163,7 @@ const HomePage = ({
                     fontSize='1.2rem'
                     as='a'
                     size='lg'
-                    colorScheme='teal'
+                    colorScheme='blue'
                     rightIcon={<FaArrowRight fontSize='0.8em' />}
                   >
                     {t('homepage.browse-wiki')}
@@ -258,7 +258,7 @@ const HomePage = ({
         </Box>
 
 
-        <Box as='section' bg='teal.500'>
+        <Box as='section' bg='blue.500'>
           <Container py='7.5rem' maxW='1280px' color='white'>
             <Box maxW='770px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading' mb='5'>
@@ -299,7 +299,7 @@ const HomePage = ({
           </Container>
         </Box>
 
-{/*         <Box bg='teal.500'> 
+{/*         <Box bg='blue.500'> 
           <Container py='120px' maxW='1200px' px='32px' color='white'>
             <Box maxW='560px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading-2' mb='4'>
@@ -353,7 +353,7 @@ const HomePage = ({
                   alignSelf='center'
                   as='a'
                   minW='7rem'
-                  colorScheme='teal'
+                  colorScheme='blue'
                   href={siteConfig.openCollective.url}
                   rel='noopener'
                   target='_blank'
@@ -409,7 +409,7 @@ const HomePage = ({
                   alignSelf='center'
                   as='a'
                   minW='7rem'
-                  colorScheme='teal'
+                  colorScheme='blue'
                   href={siteConfig.patreon.url}
                   rel='noopener'
                   target='_blank'

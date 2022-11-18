@@ -42,7 +42,7 @@ const Feature = ({ title, icon, children, ...props }) => {
         rounded='12px'
         w='12'
         h='12'
-        bg='teal.500'
+        bg='blue.500'
         align='center'
         justify='center'
       >

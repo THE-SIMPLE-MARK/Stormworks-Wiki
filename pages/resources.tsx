@@ -54,7 +54,7 @@ function Resources() {
     >
       <Text mt='2'>{t('resources.message')}</Text>
       <ShowcaseBanner />
-      <Tabs colorScheme='teal' variant='line' mt='6'>
+      <Tabs colorScheme='blue' variant='line' mt='6'>
         <TabList>
           <Tab>
             <ResourcesTabContent icon={FaMicrophone} text={TALKS} />
@@ -145,7 +145,7 @@ function ResourcesTabContent({ icon, text }: ResourcesTabContentProps) {
         as={icon}
         display='inline-block'
         verticalAlign='middle'
-        color='teal.500'
+        color='blue.500'
         mr='2'
       />
       <span>{text}</span>

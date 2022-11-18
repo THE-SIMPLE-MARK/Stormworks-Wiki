@@ -24,7 +24,7 @@ import { TutorialFileAction } from 'components/tutorial/tutorial-file-action'
 import { JoinCommunityCards } from 'components/community-card'
 import NextImage from 'next/image'
 
-const { Alert, AspectRatio, Box, chakra, Kbd, Link } = Chakra
+const { Alert, AspectRatio, Box, chakra, Kbd, Link, } = Chakra
 
 export const MDXComponents = {
   ...Chakra,
@@ -69,7 +69,7 @@ export const MDXComponents = {
     return <CodeBlock {...props} />
   },
   kbd: Kbd,
-  br: ({ reset, ...props }) => (
+  br: ({ reset, ...props }: { reset: string, props: any }) => (
     <Box
       as={reset ? 'br' : undefined}
       height={reset ? undefined : '24px'}

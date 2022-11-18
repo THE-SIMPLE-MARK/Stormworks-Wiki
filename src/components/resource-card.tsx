@@ -50,8 +50,8 @@ function ResourceCard(props: ResourceCardProps) {
               <Badge
                 as='a'
                 rel='tag'
-                color='teal.600'
-                _dark={{ color: 'teal.400' }}
+                color='blue.600'
+                _dark={{ color: 'blue.400' }}
                 textTransform='uppercase'
                 fontSize='xs'
                 fontWeight='bold'

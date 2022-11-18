@@ -37,7 +37,7 @@ const CodeBlock = ({ path, code, showLineNumbers = false }: CodeBlockProps) => {
             <Button
               size='xs'
               textTransform='uppercase'
-              colorScheme='teal'
+              colorScheme='blue'
               leftIcon={<Icon as={RiFileEditLine} />}
               onClick={() => {
                 sandpack.openFile(path)
@@ -49,7 +49,7 @@ const CodeBlock = ({ path, code, showLineNumbers = false }: CodeBlockProps) => {
             <Button
               size='xs'
               textTransform='uppercase'
-              colorScheme='teal'
+              colorScheme='blue'
               leftIcon={<Icon as={RiFileTransferLine} />}
               onClick={() => {
                 sandpack.openFile(path)

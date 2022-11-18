@@ -50,7 +50,7 @@ const TutorialMenu = ({
                 <MenuGroup
                   key={route.path}
                   title={route.title}
-                  color='teal.500'
+                  color='blue.500'
                 >
                   {headings.map((heading) => (
                     <MenuItem
@@ -69,7 +69,7 @@ const TutorialMenu = ({
           }
           return (
             <Link key={route.path} href={route.path} passHref>
-              <MenuItem fontSize='sm' fontWeight='semibold' color='teal.500'>
+              <MenuItem fontSize='sm' fontWeight='semibold' color='blue.500'>
                 {route.title}
               </MenuItem>
             </Link>
