@@ -4,7 +4,7 @@
   "jsxSingleQuote": true,
 	"singleQuote": true,
 	"bracketSpacing": true,
-	"bracketLine": true,
+	"bracketSameLine": true,
 	"quoteProps": "as-needed",
 	"trailingComma": "es5",
 	"arrowParens": "avoid",
