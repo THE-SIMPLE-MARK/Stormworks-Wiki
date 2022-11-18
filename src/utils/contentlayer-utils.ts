@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { allDocs, Doc } from 'contentlayer/generated'
 import { MixedArray, toArray, uniq } from './js-utils'
 

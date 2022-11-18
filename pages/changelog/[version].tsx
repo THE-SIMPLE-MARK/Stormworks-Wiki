@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { allChangelogs } from 'contentlayer/generated'
 import type {
   InferGetStaticPropsType,
@@ -25,6 +27,8 @@ export default function Page({
 
   return (
     <ChangelogLayout hideToc frontmatter={doc.frontMatter}>
+			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore */}
       <Component components={MDXComponents} />
     </ChangelogLayout>
   )
@@ -48,6 +52,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   let versionParam = ctx.params.version
 
   if (versionParam === 'latest') {
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
     versionParam = semverMaxSatisfying(
       allChangelogs.map(({ version }) => version),
       '*',

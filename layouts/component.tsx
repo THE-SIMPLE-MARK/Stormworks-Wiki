@@ -1,5 +1,7 @@
 import { Box, HStack, Stack } from '@chakra-ui/react'
 import { MDXComponents } from 'components/mdx-components'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Doc } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import NextLink from 'next/link'
@@ -10,6 +12,8 @@ import { themes } from 'utils/available-themes'
 
 function MDXContent({ doc }: { doc: Doc | undefined }) {
   const Component = useMDXComponent(doc?.body?.code ?? '')
+	{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore */}
   return <Component components={MDXComponents} />
 }
 

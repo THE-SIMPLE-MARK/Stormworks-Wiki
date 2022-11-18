@@ -79,7 +79,7 @@ export const ComponentsOverview = ({ categories, headings }: Props) => {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const group = getGroupedComponents()
 
-  const categories = Object.entries(group).reduce((acc, item) => {
+  const categories = Object.entries(group).reduce((acc, item: [string, any]) => {
     const [title, items] = item
     if (title === 'Layout') return acc
     const category: Category = {

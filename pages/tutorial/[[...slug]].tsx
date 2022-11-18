@@ -1,4 +1,6 @@
 import { MDXComponents } from 'components/mdx-components'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { allTutorials } from 'contentlayer/generated'
 import TutorialLayout from 'layouts/tutorial'
 import { GetStaticPaths, InferGetStaticPropsType } from 'next'
@@ -11,6 +13,8 @@ export default function Page({
   const Component = useMDXComponent(tutorial.body.code)
   return (
     <TutorialLayout frontmatter={tutorial.frontMatter}>
+			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore */}
       <Component components={MDXComponents} />
     </TutorialLayout>
   )

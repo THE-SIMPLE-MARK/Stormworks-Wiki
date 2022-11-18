@@ -12,6 +12,8 @@ import { RouteItem } from 'utils/get-route-context'
 import { Frontmatter } from 'src/types/frontmatter'
 import { List, ListItem } from '@chakra-ui/react'
 import SidebarLink from 'components/sidebar/sidebar-link'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { allChangelogs } from 'contentlayer/generated'
 import TocNav from 'components/toc-nav'
 import { t } from 'utils/i18n'
