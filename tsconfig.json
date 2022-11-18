@@ -17,9 +17,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "hooks/*": ["src/hooks/*"],
-      "components/*": ["src/components/*"],
-      "utils/*": ["src/utils/*"],
+      "hooks/*": ["/hooks/*"],
+      "components/*": ["/components/*"],
+      "utils/*": ["/utils/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "incremental": true

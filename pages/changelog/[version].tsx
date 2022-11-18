@@ -10,6 +10,8 @@ import { useRouter } from 'next/router'
 import semverMaxSatisfying from 'semver/ranges/max-satisfying'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { useEffect } from 'react'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { MDXComponents } from 'components/mdx-components'
 import ChangelogLayout from 'layouts/changelog'
 
