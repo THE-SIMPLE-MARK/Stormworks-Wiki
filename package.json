@@ -5,17 +5,12 @@
     "dev": "next",
     "build": "next build",
     "lint": "next lint",
-    "gen:theme-typings": "chakra-cli tokens theme.ts",
-    "avatars:gen": "tsx scripts/avatars.ts",
-    "members:gen": "tsx scripts/all-members.ts",
-    "former-members:gen": "tsx scripts/get-former-members.ts",
-    "search-meta:gen": "tsx scripts/get-search-meta.ts",
-    "contributing:gen": "tsx scripts/build-contributing-page.ts",
+		"prettier": "prettier --write .",
     "start": "next start",
     "cache:clean": "rm -rf .next .contentlayer",
-    "clean": "rm -rf package-lock.json node_modules",
+    "packages:clean": "rm -rf package-lock.json node_modules",
     "reinstall": "npm clean && npm i",
-    "deps": "npm up '@chakra-ui/*' --latest"
+    "deps:upgrade": "npm up '@chakra-ui/*' --latest"
   },
   "dependencies": {
     "@chakra-ui/cli": "2.1.8",
