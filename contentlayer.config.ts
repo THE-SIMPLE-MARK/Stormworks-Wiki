@@ -7,8 +7,8 @@ import remarkEmoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
 import remarkSlug from 'remark-slug'
 import siteConfig from './configs/site-config.json'
-import { getTableOfContents } from './src/utils/get-table-of-contents'
-import { rehypeMdxCodeMeta } from './src/utils/rehype-code-meta'
+import { getTableOfContents } from 'utils/get-table-of-contents'
+import { rehypeMdxCodeMeta } from 'utils/rehype-code-meta'
 
 const computedFields: ComputedFields = {
   slug: {
