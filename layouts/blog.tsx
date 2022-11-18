@@ -32,8 +32,7 @@ export default function BlogLayout(props: BlogLayoutProps) {
         color='gray.500'
         fontSize='sm'
         display='block'
-        mb='16'
-      >
+        mb='16'>
         {publishedDate.text}
       </Box>
 

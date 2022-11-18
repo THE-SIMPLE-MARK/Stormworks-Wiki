@@ -35,8 +35,7 @@ const EditableNotice = (props: BoxProps) => {
       textAlign='center'
       textTransform='uppercase'
       pointerEvents='none'
-      {...props}
-    >
+      {...props}>
       {t('component.mdx-components.react-live-block.editable-example')}
     </Box>
   )
@@ -45,7 +44,7 @@ const EditableNotice = (props: BoxProps) => {
 function ReactLiveBlock({ editable, rawCode, ...rest }) {
   const code = rawCode.trim().replace('// prettier-ignore', '')
   const [editorCode, setEditorCode] = useState(code.trim())
-  const onChange = (newCode) => setEditorCode(newCode.trim())
+  const onChange = newCode => setEditorCode(newCode.trim())
   const liveProviderProps = {
     code: editorCode,
     scope,

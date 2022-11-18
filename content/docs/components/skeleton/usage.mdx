@@ -101,8 +101,7 @@ function Example() {
         isLoaded={isLoaded}
         bg='green.500'
         color='white'
-        fadeDuration={1}
-      >
+        fadeDuration={1}>
         <Box>Hello React!</Box>
       </Skeleton>
       <Skeleton
@@ -110,13 +109,12 @@ function Example() {
         isLoaded={isLoaded}
         fadeDuration={4}
         bg='blue.500'
-        color='white'
-      >
+        color='white'>
         <Box>Hello ChakraUI!</Box>
       </Skeleton>
 
       <Box textAlign='center'>
-        <Button onClick={() => setIsLoaded((v) => !v)}>toggle</Button>
+        <Button onClick={() => setIsLoaded(v => !v)}>toggle</Button>
       </Box>
     </Stack>
   )

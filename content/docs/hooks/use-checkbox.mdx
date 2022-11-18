@@ -29,7 +29,7 @@ The `useCheckbox` hook returns following props
 
 ```jsx
 function Example() {
-  const CustomCheckbox = (props) => {
+  const CustomCheckbox = props => {
     const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
       useCheckbox(props)
 
@@ -47,8 +47,7 @@ function Example() {
         px={3}
         py={1}
         cursor='pointer'
-        {...htmlProps}
-      >
+        {...htmlProps}>
         <input {...getInputProps()} hidden />
         <Flex
           alignItems='center'
@@ -57,11 +56,12 @@ function Example() {
           borderColor='green.500'
           w={4}
           h={4}
-          {...getCheckboxProps()}
-        >
+          {...getCheckboxProps()}>
           {state.isChecked && <Box w={2} h={2} bg='green.500' />}
         </Flex>
-        <Text color="gray.700" {...getLabelProps()}>Click me</Text>
+        <Text color='gray.700' {...getLabelProps()}>
+          Click me
+        </Text>
       </chakra.label>
     )
   }

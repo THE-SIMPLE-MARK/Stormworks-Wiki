@@ -27,7 +27,7 @@ export default function Page({
 
   return (
     <ChangelogLayout hideToc frontmatter={doc.frontMatter}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </ChangelogLayout>
@@ -37,7 +37,7 @@ export default function Page({
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [
-      ...allChangelogs.map((doc) => ({
+      ...allChangelogs.map(doc => ({
         params: { version: doc.version },
       })),
       {
@@ -48,15 +48,15 @@ export const getStaticPaths: GetStaticPaths = () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async ctx => {
   let versionParam = ctx.params.version
 
   if (versionParam === 'latest') {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     versionParam = semverMaxSatisfying(
       allChangelogs.map(({ version }) => version),
-      '*',
+      '*'
     )
   }
 

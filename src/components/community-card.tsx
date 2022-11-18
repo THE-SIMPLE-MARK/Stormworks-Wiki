@@ -13,8 +13,7 @@ function CommunityCardItem({ children, accentColor, icon, href }) {
       borderWidth='1px'
       py='3'
       px='4'
-      rounded='lg'
-    >
+      rounded='lg'>
       <Box as='span' fontSize='xl' color={accentColor}>
         {icon}
       </Box>
@@ -29,15 +28,13 @@ export function JoinCommunityCards() {
       <CommunityCardItem
         accentColor='#5865F2'
         icon={<DiscordIcon />}
-        href='https://chakra-ui.com/discord'
-      >
+        href='https://chakra-ui.com/discord'>
         Join the Discord
       </CommunityCardItem>
       <CommunityCardItem
         accentColor='twitter.500'
         icon={<FaTwitter />}
-        href='https://twitter.com/chakra_ui'
-      >
+        href='https://twitter.com/chakra_ui'>
         Follow us on Twitter
       </CommunityCardItem>
     </SimpleGrid>

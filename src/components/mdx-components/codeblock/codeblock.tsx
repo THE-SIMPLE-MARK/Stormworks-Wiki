@@ -15,7 +15,7 @@ function CodeBlock(props) {
      * Lazily-load <ReactLiveBlock /> to save bundle size.
      */
     on,
-    [on],
+    [on]
   )
   const {
     className,

@@ -121,7 +121,7 @@ The `Icon` component renders as an `svg` element.
 This enables you to define your own custom icon components:
 
 ```jsx live=false
-const CircleIcon = (props) => (
+const CircleIcon = props => (
   <Icon viewBox='0 0 200 200' {...props}>
     <path
       fill='currentColor'
@@ -190,4 +190,3 @@ When `children` is not provided, the `Icon` component renders a fallback icon.
 ```jsx
 <Icon />
 ```
-

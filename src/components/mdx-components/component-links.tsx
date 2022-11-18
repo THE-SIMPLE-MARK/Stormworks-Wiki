@@ -45,8 +45,7 @@ function ComponentLink(props: ComponentLinkProps) {
           height: 'auto',
         },
       }}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </Button>
   )
@@ -68,12 +67,12 @@ function ComponentLinks(props: ComponentLinksProps) {
   const githubLink = (github?.url || github?.package) && (
     <ComponentLink
       url={
-        github.url || `${githubRepoUrl}/tree/main/packages/components/${github.package}`
+        github.url ||
+        `${githubRepoUrl}/tree/main/packages/components/${github.package}`
       }
       icon={FaGithub}
       iconColor={iconColor}
-      iconSize='1rem'
-    >
+      iconSize='1rem'>
       {t('component.mdx-components.component-links.view-source')}
     </ComponentLink>
   )
@@ -83,8 +82,7 @@ function ComponentLinks(props: ComponentLinksProps) {
       url={`https://www.npmjs.com/package/${npm.package}`}
       icon={FaNpm}
       iconSize='2rem'
-      iconColor='red.500'
-    >
+      iconColor='red.500'>
       {npm.package}
     </ComponentLink>
   )
@@ -95,8 +93,7 @@ function ComponentLinks(props: ComponentLinksProps) {
       url={storybook.url}
       icon={StorybookIcon}
       iconSize='1.25rem'
-      iconColor='pink.500'
-    >
+      iconColor='pink.500'>
       {t('component.mdx-components.component-links.view-storybook')}
     </ComponentLink>
   )
@@ -107,8 +104,7 @@ function ComponentLinks(props: ComponentLinksProps) {
       url={video.url}
       icon={FaYoutube}
       iconSize='1.2rem'
-      iconColor='red.500'
-    >
+      iconColor='red.500'>
       {t('component.mdx-components.component-links.view-video')}
     </ComponentLink>
   )
@@ -118,8 +114,7 @@ function ComponentLinks(props: ComponentLinksProps) {
       url={`${githubRepoUrl}/tree/main/packages/components/theme/src/components/${theme.componentName}.ts`}
       icon={FaGithub}
       iconColor={iconColor}
-      iconSize='1rem'
-    >
+      iconSize='1rem'>
       {t('component.mdx-components.component-links.view-theme-source')}
     </ComponentLink>
   )

@@ -21,8 +21,7 @@ function CopyButton({ code, ...props }: CopyButtonProps) {
       zIndex='1'
       right='1.25em'
       {...props}
-      onClick={onCopy}
-    >
+      onClick={onCopy}>
       {hasCopied
         ? t('component.mdx-components.copy-button.copied')
         : t('component.mdx-components.copy-button.copy')}

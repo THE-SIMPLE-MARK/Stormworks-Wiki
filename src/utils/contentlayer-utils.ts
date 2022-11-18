@@ -4,7 +4,7 @@ import { allDocs, Doc } from 'contentlayer/generated'
 import { MixedArray, toArray, uniq } from './js-utils'
 
 export function getDocByType(id: string) {
-  return allDocs.filter((doc) => doc.slug.startsWith(`/docs/${id}`))
+  return allDocs.filter(doc => doc.slug.startsWith(`/docs/${id}`))
 }
 
 function toCapitalized(str: string) {
@@ -23,14 +23,14 @@ export function getGroupedComponents() {
 }
 
 const getUsageDoc = (id: string) => {
-  return allDocs.find((_doc) => _doc.id === id && _doc.scope === 'usage')
+  return allDocs.find(_doc => _doc.id === id && _doc.scope === 'usage')
 }
 
 export const getDocDoc = (slug: MixedArray): Doc | undefined => {
   const params = toArray(slug)
   const _slug = params.join('/')
   const doc = allDocs.find(
-    (doc) => doc.slug.endsWith(_slug) || doc.slug.endsWith(`${_slug}/usage`),
+    doc => doc.slug.endsWith(_slug) || doc.slug.endsWith(`${_slug}/usage`)
   ) as Doc | undefined
 
   if (!doc) return
@@ -85,5 +85,5 @@ export function getComponentTabsData(slug: MixedArray) {
       doc: getDocDoc(getSlug('theming')),
     },
   ]
-  return data.filter((item) => item.doc)
+  return data.filter(item => item.doc)
 }

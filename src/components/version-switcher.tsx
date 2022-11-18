@@ -27,11 +27,10 @@ function VersionSwitcher(props: SelectProps) {
       _dark={{ color: 'whiteAlpha.600' }}
       value={currentVersionUrl}
       aria-label={`Select the Chakra UI Docs version. You're currently viewing the version ${currentVerion} docs`}
-      onChange={(e) => {
+      onChange={e => {
         router.push(e.target.value)
       }}
-      {...props}
-    >
+      {...props}>
       {versions.map(({ label, url }) => (
         <option key={url} value={url}>
           {label}

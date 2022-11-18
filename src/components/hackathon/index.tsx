@@ -6,8 +6,7 @@ export default function HackathonBanner() {
       w='full'
       justifyContent='center'
       mb={12}
-      mt={{ base: -24, md: -12 }}
-    >
+      mt={{ base: -24, md: -12 }}>
       <LinkBox
         as='article'
         bg='blue.100'
@@ -16,8 +15,7 @@ export default function HackathonBanner() {
         py={1}
         rounded='md'
         transition='transform 150ms ease-out'
-        _hover={{ transform: 'scale(1.05, 1.05)' }}
-      >
+        _hover={{ transform: 'scale(1.05, 1.05)' }}>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={1}>
           <LinkOverlay href='https://hackathon.chakra-ui.com' isExternal>
             <Text fontWeight='bold'>Ready, Set, Build! 🚀</Text>

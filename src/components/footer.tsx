@@ -40,7 +40,7 @@ const links = [
   },
 ]
 
-const HungaryFlag = (props) => (
+const HungaryFlag = props => (
   <chakra.svg
     display='inline-block'
     mx='3'
@@ -48,12 +48,17 @@ const HungaryFlag = (props) => (
     w='auto'
     viewBox='0 0 36 36'
     verticalAlign='middle'
-    {...props}
-  >
+    {...props}>
     <title>{t('component.footer.title')}</title>
-		<path fill="#EEE" d="M0 14h36v8H0z"/>
-		<path fill="#CD2A3E" d="M32 5H4C1.791 5 0 6.791 0 9v5h36V9c0-2.209-1.791-4-4-4z"/>
-		<path fill="#436F4D" d="M4 31h28c2.209 0 4-1.791 4-4v-5H0v5c0 2.209 1.791 4 4 4z"/>
+    <path fill='#EEE' d='M0 14h36v8H0z' />
+    <path
+      fill='#CD2A3E'
+      d='M32 5H4C1.791 5 0 6.791 0 9v5h36V9c0-2.209-1.791-4-4-4z'
+    />
+    <path
+      fill='#436F4D'
+      d='M4 31h28c2.209 0 4-1.791 4-4v-5H0v5c0 2.209 1.791 4 4 4z'
+    />
   </chakra.svg>
 )
 
@@ -67,7 +72,7 @@ export const Footer = (props: StackProps) => (
       <span>by SIMPLE MARK</span>
     </Text>
     <Stack mt={4} direction='row' spacing='12px' justify='center'>
-      {links.map((link) => (
+      {links.map(link => (
         <FooterLink key={link.href} {...link} />
       ))}
     </Stack>

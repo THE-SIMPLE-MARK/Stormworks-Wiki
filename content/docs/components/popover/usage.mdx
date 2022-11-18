@@ -101,8 +101,7 @@ function WalkthroughPopover() {
     <Popover
       initialFocusRef={initialFocusRef}
       placement='bottom'
-      closeOnBlur={false}
-    >
+      closeOnBlur={false}>
       <PopoverTrigger>
         <Button>Trigger</Button>
       </PopoverTrigger>
@@ -121,8 +120,7 @@ function WalkthroughPopover() {
           display='flex'
           alignItems='center'
           justifyContent='space-between'
-          pb={4}
-        >
+          pb={4}>
           <Box fontSize='sm'>Step 2 of 4</Box>
           <ButtonGroup size='sm'>
             <Button colorScheme='green'>Setup Email</Button>
@@ -199,8 +197,7 @@ const PopoverForm = () => {
         onOpen={onOpen}
         onClose={onClose}
         placement='right'
-        closeOnBlur={false}
-      >
+        closeOnBlur={false}>
         <PopoverTrigger>
           <IconButton size='sm' icon={<EditIcon />} />
         </PopoverTrigger>
@@ -241,8 +238,7 @@ function ControlledUsage() {
         isOpen={isOpen}
         onClose={onClose}
         placement='right'
-        closeOnBlur={false}
-      >
+        closeOnBlur={false}>
         <PopoverTrigger>
           <Button colorScheme='pink'>Popover Target</Button>
         </PopoverTrigger>
@@ -293,8 +289,7 @@ function WithPopoverAnchor() {
       onClose={setIsEditing.off}
       closeOnBlur={false}
       isLazy
-      lazyBehavior='keepMounted'
-    >
+      lazyBehavior='keepMounted'>
       <HStack>
         <PopoverAnchor>
           <Input
@@ -316,7 +311,7 @@ function WithPopoverAnchor() {
       <PopoverContent>
         <PopoverBody>
           Colors:
-          <RadioGroup value={color} onChange={(newColor) => setColor(newColor)}>
+          <RadioGroup value={color} onChange={newColor => setColor(newColor)}>
             <Radio value='red'>red</Radio>
             <Radio value='blue'>blue</Radio>
             <Radio value='green'>green</Radio>
@@ -356,8 +351,7 @@ function InternalStateEx() {
                   mt={4}
                   colorScheme='blue'
                   onClick={onClose}
-                  ref={initRef}
-                >
+                  ref={initRef}>
                   Close
                 </Button>
               </PopoverBody>

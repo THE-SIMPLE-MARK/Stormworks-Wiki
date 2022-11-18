@@ -66,7 +66,7 @@ import {
 function errorMessageExample() {
   const [input, setInput] = useState('')
 
-  const handleInputChange = (e) => setInput(e.target.value)
+  const handleInputChange = e => setInput(e.target.value)
 
   const isError = input === ''
 
@@ -156,9 +156,8 @@ function FormikExample() {
           alert(JSON.stringify(values, null, 2))
           actions.setSubmitting(false)
         }, 1000)
-      }}
-    >
-      {(props) => (
+      }}>
+      {props => (
         <Form>
           <Field name='name' validate={validateName}>
             {({ field, form }) => (
@@ -173,8 +172,7 @@ function FormikExample() {
             mt={4}
             colorScheme='teal'
             isLoading={props.isSubmitting}
-            type='submit'
-          >
+            type='submit'>
             Submit
           </Button>
         </Form>

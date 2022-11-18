@@ -13,22 +13,20 @@ export const capitalize = (str: string) =>
   str.charAt(0).toUpperCase() + str.slice(1)
 
 export function groupBy(arr, criteria) {
-	return arr.reduce(function (obj, item) {
+  return arr.reduce(function (obj, item) {
+    // Check if the criteria is a function to run on the item or a property of it
+    const key = typeof criteria === 'function' ? criteria(item) : item[criteria]
 
-		// Check if the criteria is a function to run on the item or a property of it
-		const key = typeof criteria === 'function' ? criteria(item) : item[criteria];
+    // If the key doesn't exist yet, create it
+    // eslint-disable-next-line no-prototype-builtins
+    if (!obj.hasOwnProperty(key)) {
+      obj[key] = []
+    }
 
-		// If the key doesn't exist yet, create it
-		// eslint-disable-next-line no-prototype-builtins
-		if (!obj.hasOwnProperty(key)) {
-			obj[key] = [];
-		}
+    // Push the value to the object
+    obj[key].push(item)
 
-		// Push the value to the object
-		obj[key].push(item);
-
-		// Return the object to the next item in the loop
-		return obj;
-
-	}, {});
-};
+    // Return the object to the next item in the loop
+    return obj
+  }, {})
+}

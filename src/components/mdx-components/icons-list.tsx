@@ -70,8 +70,7 @@ const IconsList = () => {
     <Grid
       mt={7}
       gap={5}
-      templateColumns='repeat( auto-fit, minmax(150px, 1fr) )'
-    >
+      templateColumns='repeat( auto-fit, minmax(150px, 1fr) )'>
       {Object.keys(iconList).map((key, i) => {
         const Icon = iconList[key]
         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -97,16 +96,14 @@ const IconsList = () => {
             textAlign='center'
             variant='outline'
             flexDir='column'
-            justifyContent='center'
-          >
+            justifyContent='center'>
             <Icon />
             <Text
               as='span'
               mt={3}
               fontSize='sm'
               fontWeight='normal'
-              textAlign='center'
-            >
+              textAlign='center'>
               {key}
             </Text>
           </Button>

@@ -169,7 +169,7 @@ ReactDOM.createRoot(rootElement).render(
     {/* 👇 Here's the script */}
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <App />
-  </>,
+  </>
 )
 ```
 
@@ -369,8 +369,7 @@ export default function App({ cookies }) {
         typeof cookies === 'string'
           ? cookieStorageManagerSSR(cookies)
           : localStorageManager
-      }
-    >
+      }>
       <h1>Example</h1>
     </ChakraProvider>
   )

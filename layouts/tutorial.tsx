@@ -42,7 +42,7 @@ const TutorialMenu = ({
         variant='outline'
       />
       <MenuList>
-        {routes.map((route) => {
+        {routes.map(route => {
           if (route.path === asPath) {
             return (
               <>
@@ -50,15 +50,13 @@ const TutorialMenu = ({
                 <MenuGroup
                   key={route.path}
                   title={route.title}
-                  color='blue.500'
-                >
-                  {headings.map((heading) => (
+                  color='blue.500'>
+                  {headings.map(heading => (
                     <MenuItem
                       as='a'
                       key={heading.id}
                       href={`#${heading.id}`}
-                      fontSize='sm'
-                    >
+                      fontSize='sm'>
                       {heading.text}
                     </MenuItem>
                   ))}
@@ -120,8 +118,7 @@ export default function MDXTutorialLayout({
           routes={routes[0].routes}
         />
       }
-      files={files}
-    >
+      files={files}>
       {children}
     </TutorialContainer>
   )

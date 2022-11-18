@@ -19,8 +19,7 @@ const NotFoundPage = () => {
         spacing='4'
         as='section'
         mt={['20', null, '40']}
-        textAlign='center'
-      >
+        textAlign='center'>
         <Heading>{t('notfound.heading')}</Heading>
         <Text fontSize={{ md: 'xl' }}>{t('notfound.message')}</Text>
         <NextLink href='/' passHref>
@@ -29,8 +28,7 @@ const NotFoundPage = () => {
             aria-label='Back to Home'
             leftIcon={<FaHome />}
             colorScheme='blue'
-            size='lg'
-          >
+            size='lg'>
             {t('notfound.back-to-home')}
           </Button>
         </NextLink>

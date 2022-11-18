@@ -35,7 +35,7 @@ import {
 
 ```jsx
 <HStack spacing={4}>
-  {['sm', 'md', 'lg'].map((size) => (
+  {['sm', 'md', 'lg'].map(size => (
     <Tag size={size} key={size} variant='solid' colorScheme='teal'>
       Teal
     </Tag>
@@ -47,7 +47,7 @@ import {
 
 ```jsx
 <HStack spacing={4}>
-  {['sm', 'md', 'lg'].map((size) => (
+  {['sm', 'md', 'lg'].map(size => (
     <Tag size={size} key={size} variant='subtle' colorScheme='cyan'>
       <TagLeftIcon boxSize='12px' as={AddIcon} />
       <TagLabel>Cyan</TagLabel>
@@ -60,7 +60,7 @@ import {
 
 ```jsx
 <HStack spacing={4}>
-  {['sm', 'md', 'lg'].map((size) => (
+  {['sm', 'md', 'lg'].map(size => (
     <Tag size={size} key={size} variant='outline' colorScheme='blue'>
       <TagLabel>Blue</TagLabel>
       <TagRightIcon as={MdSettings} />
@@ -73,14 +73,13 @@ import {
 
 ```jsx
 <HStack spacing={4}>
-  {['sm', 'md', 'lg'].map((size) => (
+  {['sm', 'md', 'lg'].map(size => (
     <Tag
       size={size}
       key={size}
       borderRadius='full'
       variant='solid'
-      colorScheme='green'
-    >
+      colorScheme='green'>
       <TagLabel>Green</TagLabel>
       <TagCloseButton />
     </Tag>

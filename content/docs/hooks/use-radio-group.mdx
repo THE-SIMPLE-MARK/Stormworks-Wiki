@@ -48,8 +48,7 @@ function Example() {
           bg={state.isChecked ? 'green.200' : 'transparent'}
           w={12}
           p={1}
-          rounded='full'
-        >
+          rounded='full'>
           <Image src={image} rounded='full' {...getLabelProps()} />
         </Box>
       </chakra.label>
@@ -65,7 +64,7 @@ function Example() {
     { name: 'Jess', image: 'https://randomuser.me/api/portraits/women/95.jpg' },
   ]
 
-  const handleChange = (value) => {
+  const handleChange = value => {
     toast({
       title: `The value got changed to ${value}!`,
       status: 'success',
@@ -82,7 +81,7 @@ function Example() {
     <Stack {...getRootProps()}>
       <Text>The selected radio is: {value}</Text>
       <HStack>
-        {avatars.map((avatar) => {
+        {avatars.map(avatar => {
           return (
             <CustomRadio
               key={avatar.name}
@@ -123,7 +122,7 @@ function CustomRadioGroup(props) {
 
   return (
     <HStack {...group}>
-      {options.map((value) => {
+      {options.map(value => {
         const radio = getRadioProps({ value })
         return (
           <Radio isDisabled={isDisabled} key={value} {...radio}>

@@ -36,16 +36,14 @@ const Feature = ({ title, icon, children, ...props }) => {
       p='6'
       cursor='pointer'
       _dark={{ bg: 'gray.700' }}
-      {...props}
-    >
+      {...props}>
       <Flex
         rounded='12px'
         w='12'
         h='12'
         bg='blue.500'
         align='center'
-        justify='center'
-      >
+        justify='center'>
         <Icon fontSize='24px' color='white' as={icon} />
       </Flex>
       <Flex direction='column'>
@@ -64,7 +62,7 @@ export const FeaturesOverview = () => {
   const { asPath } = useRouter()
 
   const features = featureSidebar[asPath].routes?.[0].routes.filter(
-    (feature) => feature.path !== asPath,
+    feature => feature.path !== asPath
   )
 
   const changeFeatureText = (path: string) => {
@@ -98,12 +96,11 @@ export const FeaturesOverview = () => {
 
   return (
     <SimpleGrid mt='12' minChildWidth='15.625rem' spacing='8'>
-      {features.map((feature) => (
+      {features.map(feature => (
         <Link
           key={feature.title}
           passHref
-          href={`${feature.routes?.[0].path}?scroll=true`}
-        >
+          href={`${feature.routes?.[0].path}?scroll=true`}>
           <Feature icon={icons[feature.title] ?? null} title={feature.title}>
             {feature.summarize
               ? `${feature.routes.length} ${changeFeatureText(feature.path)}`

@@ -59,8 +59,7 @@ export default function MDXLayout(props: MDXLayoutProps) {
           next={routeContext.nextRoute}
           previous={routeContext.prevRoute}
         />
-      }
-    >
+      }>
       {children}
     </PageContainer>
   )

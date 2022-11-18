@@ -9,14 +9,14 @@ import { MDXComponents } from 'components/mdx-components'
 function toInlineCode(input: string) {
   return input
     .split(/(`\w+`)/)
-    .map((chunk) =>
+    .map(chunk =>
       chunk.startsWith('`') && chunk.endsWith('`') ? (
         <MDXComponents.code key={chunk}>
           {chunk.slice(1, -1)}
         </MDXComponents.code>
       ) : (
         chunk
-      ),
+      )
     )
 }
 

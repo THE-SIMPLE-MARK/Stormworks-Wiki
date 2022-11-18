@@ -57,8 +57,7 @@ export const TutorialFileAction = ({
             console.error('Please select a valid type.')
             break
         }
-      }}
-    >
+      }}>
       {label || formatFilePath(path)}
     </Button>
   )

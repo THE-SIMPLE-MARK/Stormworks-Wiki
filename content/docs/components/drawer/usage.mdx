@@ -41,8 +41,7 @@ function DrawerExample() {
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+        finalFocusRef={btnRef}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
@@ -126,8 +125,7 @@ function DrawerExample() {
         isOpen={isOpen}
         placement='right'
         initialFocusRef={firstField}
-        onClose={onClose}
-      >
+        onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
@@ -197,7 +195,7 @@ function SizeExample() {
   const [size, setSize] = React.useState('')
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const handleClick = (newSize) => {
+  const handleClick = newSize => {
     setSize(newSize)
     onOpen()
   }
@@ -206,12 +204,11 @@ function SizeExample() {
 
   return (
     <>
-      {sizes.map((size) => (
+      {sizes.map(size => (
         <Button
           onClick={() => handleClick(size)}
           key={size}
-          m={4}
-        >{`Open ${size} Drawer`}</Button>
+          m={4}>{`Open ${size} Drawer`}</Button>
       ))}
 
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
@@ -261,11 +258,10 @@ export const App = () => {
           <DrawerBody>
             <form
               id='my-form'
-              onSubmit={(e) => {
+              onSubmit={e => {
                 e.preventDefault()
                 console.log('submitted')
-              }}
-            >
+              }}>
               <Input name='nickname' placeholder='Type here...' />
             </form>
           </DrawerBody>

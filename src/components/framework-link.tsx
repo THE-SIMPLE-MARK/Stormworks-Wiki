@@ -11,7 +11,7 @@ import {
   ViteSvg,
 } from './framework-svg'
 
-const FrameworkLink = (props) => {
+const FrameworkLink = props => {
   const { accentColor, href, children, name } = props
   return (
     <Link passHref href={href}>
@@ -24,8 +24,7 @@ const FrameworkLink = (props) => {
         overflow='hidden'
         transform='auto'
         transition='all 0.1s ease-in-out'
-        _hover={{ textDecoration: 'none', translateY: '-2px', shadow: 'md' }}
-      >
+        _hover={{ textDecoration: 'none', translateY: '-2px', shadow: 'md' }}>
         <Box pt='4'>
           {children}
           <Box bg={accentColor} mt='4' py='1' color='white'>
@@ -45,64 +44,56 @@ export const FrameworkLinks = () => {
       <FrameworkLink
         href='/getting-started/cra-guide'
         accentColor='#0AC09D'
-        name='Create React App'
-      >
+        name='Create React App'>
         <CreateReactAppSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/nextjs-guide'
         accentColor='black'
-        name='Next.js'
-      >
+        name='Next.js'>
         <NextjsSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/gatsby-guide'
         accentColor='#663399'
-        name='Gatsby'
-      >
+        name='Gatsby'>
         <GatsbySvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/blitzjs-guide'
         accentColor='#6700EB'
-        name='Blitz.js'
-      >
+        name='Blitz.js'>
         <BlitzSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/redwoodjs-guide'
         accentColor='#BF4722'
-        name='RedwoodJS'
-      >
+        name='RedwoodJS'>
         <RedwoodSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/remix-guide'
         accentColor='#121212'
-        name='Remix'
-      >
+        name='Remix'>
         <RemixSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/vite-guide'
         accentColor='#C07600'
-        name='Vite'
-      >
+        name='Vite'>
         <ViteSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
 
       <FrameworkLink
         href='/getting-started/meteor-guide'
         accentColor='#FF6A3E'
-        name='Meteor'
-      >
+        name='Meteor'>
         <MeteorSvg style={{ margin: 'auto' }} />
       </FrameworkLink>
     </SimpleGrid>

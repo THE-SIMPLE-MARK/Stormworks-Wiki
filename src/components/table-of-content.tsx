@@ -21,7 +21,7 @@ function TableOfContent(props: TableOfContentProps) {
     headings.map(({ id }) => `[id="${id}"]`),
     {
       rootMargin: '0% 0% -24% 0%',
-    },
+    }
   )
   const linkColor = useColorModeValue('gray.600', 'gray.400')
   const linkHoverColor = useColorModeValue('gray.900', 'gray.600')
@@ -39,8 +39,7 @@ function TableOfContent(props: TableOfContentProps) {
               color={linkColor}
               _hover={{
                 color: linkHoverColor,
-              }}
-            >
+              }}>
               {text}
             </chakra.a>
           </ListItem>

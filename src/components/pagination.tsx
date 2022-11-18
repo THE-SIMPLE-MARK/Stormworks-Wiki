@@ -3,7 +3,7 @@ import { Link, SimpleGrid, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import React from 'react'
 
-export const PaginationLink = (props) => {
+export const PaginationLink = props => {
   const { label, href, children, ...rest } = props
 
   return (
@@ -14,8 +14,7 @@ export const PaginationLink = (props) => {
         }}
         flex='1'
         borderRadius='md'
-        {...rest}
-      >
+        {...rest}>
         <Text fontSize='sm' px='2'>
           {label}
         </Text>
@@ -35,15 +34,13 @@ export const Pagination = ({ previous, next, ...rest }) => {
       spacing='40px'
       my='64px'
       columns={2}
-      {...rest}
-    >
+      {...rest}>
       {previous ? (
         <PaginationLink
           textAlign='left'
           label='Previous'
           href={previous.path}
-          rel='prev'
-        >
+          rel='prev'>
           <ChevronLeftIcon mr='1' fontSize='1.2em' />
           {previous.title}
         </PaginationLink>
@@ -55,8 +52,7 @@ export const Pagination = ({ previous, next, ...rest }) => {
           textAlign='right'
           label='Next'
           href={next.path}
-          rel='next'
-        >
+          rel='next'>
           {next.title}
           <ChevronRightIcon ml='1' fontSize='1.2em' />
         </PaginationLink>

@@ -19,8 +19,8 @@ version: 1.7.3
 
   ```jsx live=false
   const HeartIcon = createIcon({
-    displayName: "HeartIcon",
-    path: [<path stroke="none" d="..." fill="none" />, <path d="..." />],
+    displayName: 'HeartIcon',
+    path: [<path stroke='none' d='...' fill='none' />, <path d='...' />],
   })
   ```
 
@@ -64,7 +64,7 @@ version: 1.7.3
     </PopoverTrigger>
     {/* popover will be positioned relative to this */}
     <PopoverAnchor>
-      <Box width="40px" height="40px" />
+      <Box width='40px' height='40px' />
     </PopoverAnchor>
     <PopoverContent>Hello World</PopoverContent>
   </Popover>
@@ -127,10 +127,10 @@ version: 1.7.3
   function Example() {
     // Via instantiation
     const toast = useToast({
-      position: "top",
-      title: "Container style is customizable",
+      position: 'top',
+      title: 'Container style is customizable',
       containerStyle: {
-        maxWidth: "100%",
+        maxWidth: '100%',
       },
     })
 
@@ -140,11 +140,10 @@ version: 1.7.3
         onClick={() => {
           toast({
             containerStyle: {
-              maxWidth: "100%",
+              maxWidth: '100%',
             },
           })
-        }}
-      >
+        }}>
         Click me to show toast with custom container style.
       </Button>
     )

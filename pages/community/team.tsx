@@ -12,7 +12,11 @@ import fs from 'fs'
 import MDXLayout from 'layouts/mdx'
 import NextImage from 'next/image'
 import { FaDiscord } from 'react-icons/fa'
-import { Contributor, Member as IMember, FormerMember as IFormerMember } from 'src/types/contributors-members'
+import {
+  Contributor,
+  Member as IMember,
+  FormerMember as IFormerMember,
+} from 'src/types/contributors-members'
 import { t } from 'utils/i18n'
 
 function Member(props: { member: IMember }) {
@@ -32,18 +36,13 @@ function Member(props: { member: IMember }) {
         <Text fontWeight='bold'>{name}</Text>
 
         <Stack align='flex-start' direction='column' spacing={2}>
-					{discordUsername && (
-						<Stack direction='row'>
-            	<Icon
-								as={FaDiscord}
-								w={5}
-								h={5}
-								color='blue.300'
-							/>
-				      <Text fontSize='sm' color='fg-muted'>
-          			{discordUsername}
-        			</Text>
-						</Stack>
+          {discordUsername && (
+            <Stack direction='row'>
+              <Icon as={FaDiscord} w={5} h={5} color='blue.300' />
+              <Text fontSize='sm' color='fg-muted'>
+                {discordUsername}
+              </Text>
+            </Stack>
           )}
         </Stack>
         <Text fontSize='sm' color='fg-muted'>
@@ -65,10 +64,7 @@ function FormerMember({ formerMember }: { formerMember: IFormerMember }) {
           alt={formerMember.name}
         />
       </Circle>
-      <Text
-        fontSize='md'
-        align='center'
-      >
+      <Text fontSize='md' align='center'>
         {formerMember.name}
       </Text>
     </VStack>
@@ -88,8 +84,7 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
         title: t('team.seo.title'),
         description: t('team.seo.description'),
         slug: '/community/team',
-      }}
-    >
+      }}>
       <Text lineHeight='tall' mt='5'>
         {t('team.message')}
       </Text>
@@ -97,7 +92,7 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
       <Stack spacing={8} mt='20'>
         <Heading size='lg'>{t('team.core-team')}</Heading>
         <SimpleGrid columns={[1, 1, 2]} spacing='40px' pt='3'>
-          {members.map((member) => (
+          {members.map(member => (
             <Member key={member.name} member={member} />
           ))}
         </SimpleGrid>
@@ -109,13 +104,10 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
             </Text>
             <SimpleGrid columns={[2, 2, 6]} spacing='40px'>
               {formerMembers.map(
-                (member) =>
+                member =>
                   member.name && (
-                    <FormerMember
-                      key={member.name}
-                      formerMember={member}
-                    />
-                  ),
+                    <FormerMember key={member.name} formerMember={member} />
+                  )
               )}
             </SimpleGrid>
           </Stack>
@@ -125,7 +117,7 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
       <Stack spacing={8} mt={{ base: '10', md: '24' }}>
         <Heading size='lg'>{t('team.project-contributors')}</Heading>
         <Wrap spacing='3'>
-          {contributors.map((contributor) => (
+          {contributors.map(contributor => (
             <Circle overflow='hidden' key={contributor.name}>
               <NextImage
                 width={48}
@@ -142,7 +134,7 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
 }
 
 export async function getStaticProps() {
-	// TODO: use the functions for these
+  // TODO: use the functions for these
   /**
    * Read the profile/bio of each member from `.all-membersrc` file
    * to avoid overfetching from Github
@@ -154,7 +146,7 @@ export async function getStaticProps() {
    * to avoid overfetching from Github
    */
   const { formerMembers } = JSON.parse(
-    fs.readFileSync('.all-former-membersrc', 'utf-8'),
+    fs.readFileSync('.all-former-membersrc', 'utf-8')
   )
 
   /**
@@ -162,7 +154,7 @@ export async function getStaticProps() {
    * to avoid overfetching from Github
    */
   const { contributors } = JSON.parse(
-    fs.readFileSync('.all-contributorsrc', 'utf-8'),
+    fs.readFileSync('.all-contributorsrc', 'utf-8')
   )
 
   return {

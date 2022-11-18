@@ -25,8 +25,8 @@ it is needed.
 ### Defining Any Standard CSS Property
 
 In case you need to set a CSS property that is not listed in the
-[Style Props](/docs/styled-system/style-props) list, you can use the
-`sx` prop and pass it whatever CSS property you desire.
+[Style Props](/docs/styled-system/style-props) list, you can use the `sx` prop
+and pass it whatever CSS property you desire.
 
 One such example is the `filter` property:
 
@@ -70,8 +70,7 @@ component you put `sx` on.
         '.my-box:hover &': {
           color: 'green.500',
         },
-      }}
-    >
+      }}>
       And I will turn green!
     </Box>
   </Heading>
@@ -86,8 +85,7 @@ component you put `sx` on.
     '@media print': {
       display: 'none',
     },
-  }}
->
+  }}>
   This text won't be shown when printing this page.
 </Box>
 ```

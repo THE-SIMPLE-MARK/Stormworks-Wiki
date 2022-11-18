@@ -38,8 +38,7 @@ export const ComponentsOverview = ({ categories, headings }: Props) => {
         title: 'Components',
         slug: '/docs/components',
         headings,
-      }}
-    >
+      }}>
       <VStack w='full' mt={5} alignItems='stretch' spacing={12}>
         <Text lineHeight='tall'>
           Chakra UI provides prebuild components to help you build your projects
@@ -51,8 +50,7 @@ export const ComponentsOverview = ({ categories, headings }: Props) => {
               key={title}
               display='flex'
               flexDirection='column'
-              rowGap={6}
-            >
+              rowGap={6}>
               <Heading as='h2' size='md' id={id} scrollMarginTop={24}>
                 {title}
               </Heading>
@@ -79,20 +77,23 @@ export const ComponentsOverview = ({ categories, headings }: Props) => {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const group = getGroupedComponents()
 
-  const categories = Object.entries(group).reduce((acc, item: [string, any]) => {
-    const [title, items] = item
-    if (title === 'Layout') return acc
-    const category: Category = {
-      id: title.toLowerCase().replace(/ /g, '-'),
-      title,
-      components: items.map(({ title, slug, id }) => ({
-        id,
+  const categories = Object.entries(group).reduce(
+    (acc, item: [string, any]) => {
+      const [title, items] = item
+      if (title === 'Layout') return acc
+      const category: Category = {
+        id: title.toLowerCase().replace(/ /g, '-'),
         title,
-        url: slug,
-      })),
-    }
-    return acc.concat(category)
-  }, [] as Category[])
+        components: items.map(({ title, slug, id }) => ({
+          id,
+          title,
+          url: slug,
+        })),
+      }
+      return acc.concat(category)
+    },
+    [] as Category[]
+  )
 
   const headings = Object.entries(group).reduce((acc, item) => {
     const [title] = item

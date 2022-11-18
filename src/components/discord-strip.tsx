@@ -12,15 +12,13 @@ export function DiscordStrip(props: BoxProps) {
         <Flex
           direction={{ base: 'column', md: 'row' }}
           align='center'
-          justify='space-between'
-        >
+          justify='space-between'>
           <Flex color='white'>
             <Flex
               alignItems='center'
               justifyContent='center'
               fontSize='48px'
-              mr='5'
-            >
+              mr='5'>
               <DiscordIcon />
             </Flex>
             <Box>
@@ -49,8 +47,7 @@ export function DiscordStrip(props: BoxProps) {
             px='24px'
             h='56px'
             rounded='lg'
-            fontSize='md'
-          >
+            fontSize='md'>
             {t('component.discord-strip.join-the-discord')}
           </chakra.button>
         </Flex>

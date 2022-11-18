@@ -12,8 +12,7 @@ const EditPageLink = ({ href }: { href?: string }) => {
         direction='row'
         spacing={1}
         align='center'
-        opacity={0.7}
-      >
+        opacity={0.7}>
         <Icon as={MdEdit} mr='1' />
         <chakra.span>
           {t('component.edit-page-button.edit-this-page')}

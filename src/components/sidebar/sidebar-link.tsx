@@ -5,7 +5,7 @@ import { forwardRef, Ref, useEffect, useRef } from 'react'
 
 const StyledLink = forwardRef(function StyledLink(
   props: PropsOf<typeof chakra.a> & { isActive?: boolean },
-  ref: Ref<any>,
+  ref: Ref<any>
 ) {
   const { isActive, ...rest } = props
 

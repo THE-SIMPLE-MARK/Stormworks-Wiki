@@ -51,15 +51,15 @@ version: 2.2.0
   get the correct value on first render.
 
   ```jsx live=false
-  const [isMobile] = useMediaQuery("(max-width: 768px)", {
+  const [isMobile] = useMediaQuery('(max-width: 768px)', {
     // you can now pass `ssr: false`
     ssr: false,
   })
 
   const buttonSize = useBreakpointValue(
-    { base: "sm", lg: "md" },
+    { base: 'sm', lg: 'md' },
     // you can now pass `ssr: false`
-    { ssr: false },
+    { ssr: false }
   )
 
   // you can now pass `ssr: false`

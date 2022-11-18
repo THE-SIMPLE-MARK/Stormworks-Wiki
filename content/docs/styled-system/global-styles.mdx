@@ -39,7 +39,7 @@ const theme = {
 // NB: Chakra gives you access to `colorMode` and `theme` in `props`
 const theme = {
   styles: {
-    global: (props) => ({
+    global: props => ({
       'html, body': {
         fontSize: 'sm',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
@@ -62,7 +62,7 @@ like:
 import { mode } from '@chakra-ui/theme-tools'
 
 const styles = {
-  global: (props) => ({
+  global: props => ({
     body: {
       fontFamily: 'body',
       color: mode('gray.800', 'whiteAlpha.900')(props),
@@ -93,7 +93,7 @@ elements globally. Here's what you'll do.
 
 ```js
 // 1. Wrap the rendered mdx in a container
-const MDXWrapper = (props) => <div className='mdx-prose' {...props} />
+const MDXWrapper = props => <div className='mdx-prose' {...props} />
 
 // 2. Define global styles
 // PRO TIP: Again, you can also use the function version here

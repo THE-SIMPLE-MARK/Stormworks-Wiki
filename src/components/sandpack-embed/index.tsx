@@ -55,16 +55,14 @@ const SandpackEmbed = ({
           typescript: '^4.0.0',
           ...devDependencies,
         },
-      }}
-    >
+      }}>
       <Box
         as={SandpackLayout}
         sx={{
           '--sp-layout-height': 'auto',
         }}
         style={{ flexDirection: isHorizontal ? 'row' : 'column-reverse' }}
-        {...layoutOptions}
-      >
+        {...layoutOptions}>
         <SandpackCodeEditor
           showLineNumbers
           style={{

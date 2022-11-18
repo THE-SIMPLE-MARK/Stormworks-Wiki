@@ -24,11 +24,11 @@ import { TutorialFileAction } from 'components/tutorial/tutorial-file-action'
 import { JoinCommunityCards } from 'components/community-card'
 import NextImage from 'next/image'
 
-const { Alert, AspectRatio, Box, chakra, Kbd, Link, } = Chakra
+const { Alert, AspectRatio, Box, chakra, Kbd, Link } = Chakra
 
 export const MDXComponents = {
   ...Chakra,
-  Image: (props) => (
+  Image: props => (
     <Box my='5'>
       <NextImage
         layout='responsive'
@@ -44,14 +44,14 @@ export const MDXComponents = {
       <MDXComponents.Image {...props} />
     </Link>
   ),
-  h1: (props) => <chakra.h1 apply='mdx.h1' {...props} />,
-  h2: (props) => <LinkedHeading apply='mdx.h2' {...props} />,
-  h3: (props) => <LinkedHeading as='h3' apply='mdx.h3' {...props} />,
-  h4: (props) => <LinkedHeading as='h4' apply='mdx.h4' {...props} />,
-  hr: (props) => <chakra.hr apply='mdx.hr' {...props} />,
-  strong: (props) => <Box as='strong' fontWeight='semibold' {...props} />,
+  h1: props => <chakra.h1 apply='mdx.h1' {...props} />,
+  h2: props => <LinkedHeading apply='mdx.h2' {...props} />,
+  h3: props => <LinkedHeading as='h3' apply='mdx.h3' {...props} />,
+  h4: props => <LinkedHeading as='h4' apply='mdx.h4' {...props} />,
+  hr: props => <chakra.hr apply='mdx.hr' {...props} />,
+  strong: props => <Box as='strong' fontWeight='semibold' {...props} />,
   code: InlineCode,
-  pre: (props) => {
+  pre: props => {
     if (typeof props.children === 'string') return <Pre {...props} />
     if (props.children.props.type === 'tutorial') {
       const className = props.children.props.className || ''
@@ -69,7 +69,7 @@ export const MDXComponents = {
     return <CodeBlock {...props} />
   },
   kbd: Kbd,
-  br: ({ reset, ...props }: { reset: string, props: any }) => (
+  br: ({ reset, ...props }: { reset: string; props: any }) => (
     <Box
       as={reset ? 'br' : undefined}
       height={reset ? undefined : '24px'}
@@ -80,11 +80,11 @@ export const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: (props) => <chakra.p apply='mdx.p' {...props} />,
-  ul: (props) => <chakra.ul apply='mdx.ul' {...props} />,
-  ol: (props) => <chakra.ol apply='mdx.ul' {...props} />,
-  li: (props) => <chakra.li pb='4px' {...props} />,
-  blockquote: (props) => (
+  p: props => <chakra.p apply='mdx.p' {...props} />,
+  ul: props => <chakra.ul apply='mdx.ul' {...props} />,
+  ol: props => <chakra.ol apply='mdx.ul' {...props} />,
+  li: props => <chakra.li pb='4px' {...props} />,
+  blockquote: props => (
     <Alert
       mt='4'
       role='none'
@@ -107,7 +107,7 @@ export const MDXComponents = {
   ColorWrapper,
   FeaturesCourses,
   JoinCommunityCards,
-  SandpackEmbed: (props) => (
+  SandpackEmbed: props => (
     <Box my={6}>
       <SandpackEmbed {...props} />
     </Box>

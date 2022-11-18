@@ -45,7 +45,7 @@ export const getAllRoutes = (routes: any) => {
 
   routes[0].routes.forEach((route: RouteItem) => {
     if (route.routes) {
-      route.routes.forEach((item) => {
+      route.routes.forEach(item => {
         allRoutes.push(item)
       })
     } else {
@@ -60,7 +60,7 @@ export const getAllRoutes = (routes: any) => {
  */
 export const getRouteContext = (
   _route: RouteItem,
-  routes: RouteItem[],
+  routes: RouteItem[]
 ): RouteContext => {
   let ctx = {}
   if (!_route) return ctx

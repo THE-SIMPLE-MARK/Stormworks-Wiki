@@ -92,7 +92,7 @@ hydrate(
   <ClientCacheProvider>
     <RemixBrowser />
   </ClientCacheProvider>,
-  document,
+  document
 )
 ```
 
@@ -111,7 +111,7 @@ export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  remixContext: EntryContext
 ) {
   const cache = createEmotionCache()
   const { extractCriticalToChunks } = createEmotionServer(cache)
@@ -121,7 +121,7 @@ export default function handleRequest(
       <CacheProvider value={cache}>
         <RemixServer context={remixContext} url={request.url} />
       </CacheProvider>
-    </ServerStyleContext.Provider>,
+    </ServerStyleContext.Provider>
   )
 
   const chunks = extractCriticalToChunks(html)
@@ -131,7 +131,7 @@ export default function handleRequest(
       <CacheProvider value={cache}>
         <RemixServer context={remixContext} url={request.url} />
       </CacheProvider>
-    </ServerStyleContext.Provider>,
+    </ServerStyleContext.Provider>
   )
 
   responseHeaders.set('Content-Type', 'text/html')
@@ -290,9 +290,11 @@ export default function App() {
 
 - Add colorModeManager
 
-Remix is server-side rendered, so there will be color mode `flashing`, because chakra stores color mode in `localstorage` by default.
+Remix is server-side rendered, so there will be color mode `flashing`, because
+chakra stores color mode in `localstorage` by default.
 
- We will store color mode value in `cookie` to tell our app to render it in user color mode.
+We will store color mode value in `cookie` to tell our app to render it in user
+color mode.
 
 Here's how to fix it:
 
@@ -300,12 +302,12 @@ Here's how to fix it:
 
 ```tsx live=false
 // Typescript
-// This will return cookies 
+// This will return cookies
 export const loader: LoaderFunction = async ({ request }) => {
-// first time users will not have any cookies and you may not return
-// undefined here, hence ?? is necessary
-  return request.headers.get("cookie") ?? ''
-};
+  // first time users will not have any cookies and you may not return
+  // undefined here, hence ?? is necessary
+  return request.headers.get('cookie') ?? ''
+}
 ```
 
 2. Give `ChakraProvider` cookies from loader

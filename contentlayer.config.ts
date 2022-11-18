@@ -13,7 +13,7 @@ import { rehypeMdxCodeMeta } from './src/utils/rehype-code-meta'
 const computedFields: ComputedFields = {
   slug: {
     type: 'string',
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: doc => `/${doc._raw.flattenedPath}`,
   },
 }
 
@@ -32,7 +32,7 @@ const Guides = defineDocumentType(() => ({
     ...computedFields,
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         title: doc.title,
         description: doc.description,
         tags: doc.tags,
@@ -59,7 +59,7 @@ const Blogs = defineDocumentType(() => ({
     ...computedFields,
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         publishedDate: {
           raw: doc.publishedDate,
           iso: new Date(doc.publishedDate).toISOString(),
@@ -99,7 +99,7 @@ const Doc = defineDocumentType(() => ({
     ...computedFields,
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         title: doc.title,
         package: doc.package,
         description: doc.description,
@@ -126,7 +126,7 @@ const Recipe = defineDocumentType(() => ({
     ...computedFields,
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         title: doc.title,
         description: doc.description,
         tags: doc.tags,
@@ -151,7 +151,7 @@ const Tutorial = defineDocumentType(() => ({
     ...computedFields,
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         title: doc.title,
         description: doc.description,
         slug: `/${doc._raw.flattenedPath}`,
@@ -177,7 +177,7 @@ const Changelog = defineDocumentType(() => ({
   computedFields: {
     frontMatter: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         title: doc.title,
         description: doc.description,
         slug: '/changelog',

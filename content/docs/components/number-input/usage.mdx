@@ -136,8 +136,7 @@ support this use case.
   defaultValue={15}
   max={10}
   keepWithinRange={false}
-  clampValueOnBlur={false}
->
+  clampValueOnBlur={false}>
   <NumberInputField />
   <NumberInputStepper>
     <NumberIncrementStepper />
@@ -150,17 +149,16 @@ support this use case.
 
 ```jsx
 function Example() {
-  const format = (val) => `$` + val
-  const parse = (val) => val.replace(/^\$/, '')
+  const format = val => `$` + val
+  const parse = val => val.replace(/^\$/, '')
 
   const [value, setValue] = React.useState('1.53')
 
   return (
     <NumberInput
-      onChange={(valueString) => setValue(parse(valueString))}
+      onChange={valueString => setValue(parse(valueString))}
       value={format(value)}
-      max={50}
-    >
+      max={50}>
       <NumberInputField />
       <NumberInputStepper>
         <NumberIncrementStepper />
@@ -247,7 +245,7 @@ Here's an example of how to do that:
 ```jsx
 function SliderInput() {
   const [value, setValue] = React.useState(0)
-  const handleChange = (value) => setValue(value)
+  const handleChange = value => setValue(value)
 
   return (
     <Flex>
@@ -262,8 +260,7 @@ function SliderInput() {
         flex='1'
         focusThumbOnChange={false}
         value={value}
-        onChange={handleChange}
-      >
+        onChange={handleChange}>
         <SliderTrack>
           <SliderFilledTrack />
         </SliderTrack>

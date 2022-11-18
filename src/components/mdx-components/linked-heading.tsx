@@ -14,8 +14,7 @@ export const LinkedHeading = (props: HTMLChakraProps<'h2'>) => (
         opacity={0}
         _groupHover={{ opacity: 1 }}
         ml='0.375rem'
-        href={`#${props.id}`}
-      >
+        href={`#${props.id}`}>
         #
       </chakra.a>
     )}

@@ -11,8 +11,7 @@ export const VercelCallout = () => (
     color='white'
     px='4'
     py='2'
-    rounded='lg'
-  >
+    rounded='lg'>
     {t('component.vercel-callout.deployed-by')}{' '}
     <span role='img' aria-label='Vercel logo'>
       ▲

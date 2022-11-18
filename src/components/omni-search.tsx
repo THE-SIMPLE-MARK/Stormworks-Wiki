@@ -11,11 +11,11 @@ import {
   useDisclosure,
   useEventListener,
   useUpdateEffect,
-	Text,
-	HStack,
-	VisuallyHidden,
-	Kbd,
-	HTMLChakraProps
+  Text,
+  HStack,
+  VisuallyHidden,
+  Kbd,
+  HTMLChakraProps,
 } from '@chakra-ui/react'
 import { findAll } from 'highlight-words-core'
 import { matchSorter } from 'match-sorter'
@@ -63,8 +63,7 @@ function DocIcon(props) {
       width='20px'
       height='20px'
       viewBox='0 0 20 20'
-      {...props}
-    >
+      {...props}>
       <path
         d='M17 6v12c0 .52-.2 1-1 1H4c-.7 0-1-.33-1-1V2c0-.55.42-1 1-1h8l5 5zM14 8h-3.13c-.51 0-.87-.34-.87-.87V4'
         stroke='currentColor'
@@ -83,15 +82,13 @@ function EnterIcon(props) {
       width='16px'
       height='16px'
       viewBox='0 0 20 20'
-      {...props}
-    >
+      {...props}>
       <g
         stroke='currentColor'
         fill='none'
         fillRule='evenodd'
         strokeLinecap='round'
-        strokeLinejoin='round'
-      >
+        strokeLinejoin='round'>
         <path d='M18 3v4c0 2-2 4-4 4H2' />
         <path d='M8 17l-6-6 6-6' />
       </g>
@@ -106,8 +103,7 @@ function HashIcon(props) {
       width='20px'
       height='20px'
       viewBox='0 0 20 20'
-      {...props}
-    >
+      {...props}>
       <path
         d='M13 13h4-4V8H7v5h6v4-4H7V8H3h4V3v5h6V3v5h4-4v5zm-6 0v4-4H3h4z'
         stroke='currentColor'
@@ -124,65 +120,61 @@ const ACTION_KEY_DEFAULT = ['Ctrl', 'Control']
 const ACTION_KEY_APPLE = ['⌘', 'Command']
 
 function SearchButton(props: HTMLChakraProps<'button'>) {
-	const [actionKey, setActionKey] = React.useState<string[]>(ACTION_KEY_APPLE)
+  const [actionKey, setActionKey] = React.useState<string[]>(ACTION_KEY_APPLE)
 
-	React.useEffect(() => {
-		if (typeof navigator === 'undefined') return
-		const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
-		if (!isMac) {
-			setActionKey(ACTION_KEY_DEFAULT)
-		}
-	}, [])
+  React.useEffect(() => {
+    if (typeof navigator === 'undefined') return
+    const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
+    if (!isMac) {
+      setActionKey(ACTION_KEY_DEFAULT)
+    }
+  }, [])
 
-	return (
-		<chakra.button
-			flex='1'
-			type='button'
-			mx='6'
-			lineHeight='1.2'
-			w='100%'
-			bg='white'
-			whiteSpace='nowrap'
-			display={{ base: 'none', sm: 'flex' }}
-			alignItems='center'
-			color='gray.600'
-			_dark={{ bg: 'gray.700', color: 'gray.400' }}
-			py='3'
-			px='4'
-			outline='0'
-			_focus={{ shadow: 'outline' }}
-			shadow='base'
-			rounded='md'
-			{...props}
-		>
-			<SearchIcon />
-			<HStack w='full' ml='3' spacing='4px'>
-				<Text textAlign='left' flex='1'>
-					{t('component.search-bar.search-the-docs')}
-				</Text>
-				<HStack spacing='4px'>
-					<VisuallyHidden>
-						{t('component.search-bar.press')}{' '}
-					</VisuallyHidden>
-					<Kbd rounded='2px'>
-						<chakra.div
-							as='abbr'
-							title={actionKey[1]}
-							textDecoration='none !important'
-						>
-							{actionKey[0]}
-						</chakra.div>
-					</Kbd>
-					<VisuallyHidden> {t('component.search-bar.and')} </VisuallyHidden>
-					<Kbd rounded='2px'>K</Kbd>
-					<VisuallyHidden>
-						{' '}
-						{t('component.search-bar.to-search')}
-					</VisuallyHidden>
-				</HStack>
-			</HStack>
-		</chakra.button>
-	)
+  return (
+    <chakra.button
+      flex='1'
+      type='button'
+      mx='6'
+      lineHeight='1.2'
+      w='100%'
+      bg='white'
+      whiteSpace='nowrap'
+      display={{ base: 'none', sm: 'flex' }}
+      alignItems='center'
+      color='gray.600'
+      _dark={{ bg: 'gray.700', color: 'gray.400' }}
+      py='3'
+      px='4'
+      outline='0'
+      _focus={{ shadow: 'outline' }}
+      shadow='base'
+      rounded='md'
+      {...props}>
+      <SearchIcon />
+      <HStack w='full' ml='3' spacing='4px'>
+        <Text textAlign='left' flex='1'>
+          {t('component.search-bar.search-the-docs')}
+        </Text>
+        <HStack spacing='4px'>
+          <VisuallyHidden>{t('component.search-bar.press')} </VisuallyHidden>
+          <Kbd rounded='2px'>
+            <chakra.div
+              as='abbr'
+              title={actionKey[1]}
+              textDecoration='none !important'>
+              {actionKey[0]}
+            </chakra.div>
+          </Kbd>
+          <VisuallyHidden> {t('component.search-bar.and')} </VisuallyHidden>
+          <Kbd rounded='2px'>K</Kbd>
+          <VisuallyHidden>
+            {' '}
+            {t('component.search-bar.to-search')}
+          </VisuallyHidden>
+        </HStack>
+      </HStack>
+    </chakra.button>
+  )
 }
 
 function OmniSearch(props: HTMLChakraProps<'button'>) {
@@ -204,7 +196,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  useEventListener('keydown', (event) => {
+  useEventListener('keydown', event => {
     const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.platform)
     const hotkey = isMac ? 'metaKey' : 'ctrlKey'
     if (event?.key?.toLowerCase() === 'k' && event[hotkey]) {
@@ -227,7 +219,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
         keys: ['hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'content'],
       }).slice(0, 20)
     },
-    [query],
+    [query]
   )
 
   const onKeyDown = React.useCallback(
@@ -266,7 +258,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
         }
       }
     },
-    [active, modal, results, router],
+    [active, modal, results, router]
   )
 
   const onKeyUp = React.useCallback((e: React.KeyboardEvent) => {
@@ -305,8 +297,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
       <Modal
         scrollBehavior='inside'
         isOpen={modal.isOpen}
-        onClose={modal.onClose}
-      >
+        onClose={modal.onClose}>
         <ModalOverlay />
         <ModalContent
           role='combobox'
@@ -317,8 +308,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
           top='4vh'
           bg='transparent'
           shadow='lg'
-          maxW='600px'
-        >
+          maxW='600px'>
           <Flex pos='relative' align='stretch'>
             <chakra.input
               aria-autocomplete='list'
@@ -337,7 +327,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
               }}
               placeholder='Search the docs'
               value={query}
-              onChange={(e) => {
+              onChange={e => {
                 setQuery(e.target.value)
                 menu.onOpen()
               }}
@@ -355,8 +345,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
                   px: 4,
                   bg: 'white',
                   '.chakra-ui-dark &': { bg: 'gray.700' },
-                }}
-              >
+                }}>
                 <Box as='ul' role='listbox' borderTopWidth='1px' pt={2} pb={4}>
                   {results.map((item, index) => {
                     const selected = index === active
@@ -399,8 +388,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
                                   textDecoration: 'underline',
                                 },
                               },
-                            }}
-                          >
+                            }}>
                             {isLvl1 ? (
                               <DocIcon opacity={0.4} />
                             ) : (
@@ -412,8 +400,7 @@ function OmniSearch(props: HTMLChakraProps<'button'>) {
                                 <Box
                                   fontWeight='medium'
                                   fontSize='xs'
-                                  opacity={0.7}
-                                >
+                                  opacity={0.7}>
                                   {item.hierarchy.lvl1}
                                 </Box>
                               )}

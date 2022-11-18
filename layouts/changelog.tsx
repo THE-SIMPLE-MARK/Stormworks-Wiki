@@ -44,8 +44,8 @@ export function getVersions(): RouteItem[] {
   return semverRSort(
     allChangelogs
       .filter(({ version }) => version.startsWith('2.'))
-      .map(({ version }) => version),
-  ).map((version) => ({
+      .map(({ version }) => version)
+  ).map(version => ({
     title: `v${version}`,
     path: `/changelog/${version}`,
   }))
@@ -80,8 +80,7 @@ export default function MDXLayout(props: MDXLayoutProps) {
             ))}
           </List>
         </TocNav>
-      }
-    >
+      }>
       {children}
     </PageContainer>
   )

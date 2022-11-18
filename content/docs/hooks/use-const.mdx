@@ -5,8 +5,8 @@ description: 'React hook to initialize and return a constant value'
 ---
 
 `useConst` is a custom hook used to initialize and return a constant value.
-Unlike `useMemo`, this will always return the same value, and if the
-initializer is a function, only call it once.
+Unlike `useMemo`, this will always return the same value, and if the initializer
+is a function, only call it once.
 
 ## Import
 
@@ -16,7 +16,8 @@ import { useConst } from '@chakra-ui/react'
 
 ## Parameters
 
-The hook `useConst` accepts the initial value, or a function to get the initial value.
+The hook `useConst` accepts the initial value, or a function to get the initial
+value.
 
 ## Usage
 
@@ -48,11 +49,8 @@ dependencies.
 ```jsx
 function Example() {
   const [value] = useState(new Date().toTimeString())
-  return (
-    <p>Mount time: {value}</p>
-  )
+  return <p>Mount time: {value}</p>
 }
-
 ```
 
 This will work as a constant, but this is semantically wrong and it's expensive

@@ -377,10 +377,10 @@ version: 1.4.0
   actual value. It does a lookup against `theme.__cssMap`.
 
   ```jsx
-  const value = getCSSVar(theme, "colors", "blue.500")
+  const value = getCSSVar(theme, 'colors', 'blue.500')
   // => "var(--chakra-colors-blue.500)"
 
-  const value = getCSSVar(theme, "colors", "tomato")
+  const value = getCSSVar(theme, 'colors', 'tomato')
   // => "tomato" // since tomato doesn't exist in theme colors
   ```
 
@@ -818,7 +818,7 @@ version: 1.4.0
   `ThemeComponentProps`
 
   ```ts
-  import { ThemeComponentProps } from "@chakra-ui/react"
+  import { ThemeComponentProps } from '@chakra-ui/react'
 
   function baseStyle(props: ThemeComponentProps) {
     return {

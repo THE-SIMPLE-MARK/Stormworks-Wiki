@@ -85,8 +85,7 @@ the value to any of the color scales from your design system, like `whiteAlpha`,
     bgImage="url('https://bit.ly/2Z4KKcF')"
     bgPosition='center'
     bgRepeat='no-repeat'
-    mb={2}
-  >
+    mb={2}>
     <ButtonGroup gap='4'>
       <Button colorScheme='whiteAlpha'>WhiteAlpha</Button>
       <Button colorScheme='blackAlpha'>BlackAlpha</Button>
@@ -198,8 +197,7 @@ You can also pass the `loadingText` prop to show a spinner and the loading text.
     isLoading
     loadingText='Submitting'
     colorScheme='teal'
-    variant='outline'
-  >
+    variant='outline'>
     Submit
   </Button>
 </Stack>
@@ -212,8 +210,7 @@ requirements. Pass the `spinner` prop and set it to a custom react element.
 <Button
   isLoading
   colorScheme='blue'
-  spinner={<BeatLoader size={8} color='white' />}
->
+  spinner={<BeatLoader size={8} color='white' />}>
   Click me
 </Button>
 ```
@@ -228,8 +225,7 @@ element to either `start` or `end`. It is `start` by default.
     loadingText='Loading'
     colorScheme='teal'
     variant='outline'
-    spinnerPlacement='start'
-  >
+    spinnerPlacement='start'>
     Submit
   </Button>
   <Button
@@ -237,8 +233,7 @@ element to either `start` or `end`. It is `start` by default.
     loadingText='Loading'
     colorScheme='teal'
     variant='outline'
-    spinnerPlacement='end'
-  >
+    spinnerPlacement='end'>
     Continue
   </Button>
 </Stack>
@@ -308,8 +303,7 @@ props. This means you can override any style of the Button via props.
   height='48px'
   width='200px'
   border='2px'
-  borderColor='green.500'
->
+  borderColor='green.500'>
   Button
 </Button>
 ```
@@ -346,8 +340,7 @@ props to style the button.
   _focus={{
     boxShadow:
       '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
-  }}
->
+  }}>
   Join Group
 </Box>
 ```

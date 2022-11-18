@@ -39,7 +39,13 @@ function HeaderContent() {
 
   return (
     <>
-      <Flex className="cont" w='100%' h='100%' px='6' align='center' justify='space-between'>
+      <Flex
+        className='cont'
+        w='100%'
+        h='100%'
+        px='6'
+        align='center'
+        justify='space-between'>
         <Flex align='center'>
           <NextLink href='/' passHref>
             <chakra.a display='block' aria-label='StormWiki, Back to homepage'>
@@ -51,20 +57,14 @@ function HeaderContent() {
           </NextLink>
         </Flex>
 
-				<Search maxW="600px" className="search" />
+        <Search maxW='600px' className='search' />
 
-        <Flex
-          justify='flex-end'
-          align='center'
-          color='gray.400'
-          maxW='1100px'
-        >
+        <Flex justify='flex-end' align='center' color='gray.400' maxW='1100px'>
           <HStack spacing='5' display={{ base: 'none', md: 'flex' }}>
             <Link
               isExternal
               aria-label='Go to StormWiki GitHub page'
-              href={siteConfig.repo.url}
-            >
+              href={siteConfig.repo.url}>
               <Icon
                 as={GithubIcon}
                 display='block'
@@ -87,8 +87,7 @@ function HeaderContent() {
             <Link
               isExternal
               aria-label='Go to StormWiki YouTube channel'
-              href={siteConfig.youtube}
-            >
+              href={siteConfig.youtube}>
               <Icon
                 as={FaYoutube}
                 display='block'
@@ -150,8 +149,7 @@ function Header(props: HTMLChakraProps<'header'>) {
       left='0'
       right='0'
       width='full'
-      {...props}
-    >
+      {...props}>
       <chakra.div height='4.5rem' mx='auto' maxW={maxW} maxWidth={maxWidth}>
         <HeaderContent />
       </chakra.div>

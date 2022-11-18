@@ -40,20 +40,20 @@ const PropsTable = ({
 }: PropsTableProps) => {
   const propList = React.useMemo(
     () => makePropsTable({ of, omit, only }),
-    [of, omit, only],
+    [of, omit, only]
   )
 
   if (!propList.length) {
     // this error breaks the build to notify you when there would be an empty table
     throw new Error(
       `No props left to render for component ${of}.
-Remove the use of <PropsTable of="${of}" /> for this component in the docs.`,
+Remove the use of <PropsTable of="${of}" /> for this component in the docs.`
     )
   }
 
   return (
     <Stack overflowX='auto' spacing='16' my='10'>
-      {propList.map((prop) => (
+      {propList.map(prop => (
         <chakra.div
           key={prop.name}
           css={{
@@ -74,8 +74,7 @@ Remove the use of <PropsTable of="${of}" /> for this component in the docs.`,
               padding: '4px 0px 4px 8px',
               width: '100%',
             },
-          }}
-        >
+          }}>
           <chakra.div css={{ textAlign: 'start', fontSize: '1em' }}>
             <chakra.h3
               css={{
@@ -83,8 +82,7 @@ Remove the use of <PropsTable of="${of}" /> for this component in the docs.`,
                 paddingBottom: 4,
                 marginBottom: 16,
                 borderBottomWidth: 1,
-              }}
-            >
+              }}>
               <HStack>
                 <Code colorScheme='purple'>{prop.name}</Code>
                 {prop.required && (
@@ -145,13 +143,13 @@ const isGenericThemeable = (type: string) =>
 const omitGenericThemeableType = (type: string) =>
   type
     .split(' | ')
-    .filter((type) => isGenericThemeable(type))
+    .filter(type => isGenericThemeable(type))
     .join(' | ') || type
 
 function toLiteralStringType(strings: string[]) {
   return (
     strings
-      .map((s) => `"${s}"`)
+      .map(s => `"${s}"`)
       .join(' | ')
       .trim() || 'string'
   )
@@ -160,8 +158,8 @@ function toLiteralStringType(strings: string[]) {
 function isColorScheme(value: unknown): value is Record<string, string> {
   return (
     isObject(value) &&
-    ['50', '100', '200', '300', '400', '600', '700', '800', '900'].every((k) =>
-      isString(value[k]),
+    ['50', '100', '200', '300', '400', '600', '700', '800', '900'].every(k =>
+      isString(value[k])
     )
   )
 }
@@ -181,8 +179,7 @@ function makePropsTable({ of, omit, only }: MakePropsTableOptions) {
       {t('component.props-table.you-can')}{' '}
       <Link
         href='/docs/theming/customize-theme#customizing-component-styles'
-        passHref
-      >
+        passHref>
         <Anchor>{t('component.props-table.extend-the-theme')}</Anchor>
       </Link>{' '}
       {t('component.props-table.to-implement-them')}

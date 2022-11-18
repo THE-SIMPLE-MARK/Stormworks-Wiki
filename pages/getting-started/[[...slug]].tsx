@@ -13,7 +13,7 @@ export default function Page({
   const Component = useMDXComponent(doc.body.code)
   return (
     <MDXLayout frontmatter={doc.frontMatter}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </MDXLayout>
@@ -22,20 +22,18 @@ export default function Page({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allGuides
-    .map((t) => t._id.replace('getting-started/', '').replace('.mdx', ''))
-    .map((id) => ({ params: { slug: id === 'index' ? [] : id.split('/') } }))
+    .map(t => t._id.replace('getting-started/', '').replace('.mdx', ''))
+    .map(id => ({ params: { slug: id === 'index' ? [] : id.split('/') } }))
   return { paths, fallback: false }
 }
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps = async ctx => {
   const params = toArray(ctx.params.slug)
   let doc: Guide
   if (params.length === 0) {
-    doc = allGuides.find((t) => t._id === 'getting-started/index.mdx')
+    doc = allGuides.find(t => t._id === 'getting-started/index.mdx')
   } else {
-    doc = allGuides.find((guide) =>
-      guide._id.endsWith(`${params.join('/')}.mdx`),
-    )
+    doc = allGuides.find(guide => guide._id.endsWith(`${params.join('/')}.mdx`))
   }
   return { props: { doc } }
 }

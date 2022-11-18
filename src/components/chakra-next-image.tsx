@@ -3,7 +3,7 @@ import NextImage from 'next/image'
 import type { ImageLoaderProps, ImageProps } from 'next/image'
 
 export const ChakraNextUnwrappedImage = chakra(NextImage, {
-  shouldForwardProp: (prop) =>
+  shouldForwardProp: prop =>
     [
       'width',
       'height',
@@ -41,8 +41,7 @@ const ChakraNextImage = (props: ImageProps & FlexProps) => {
       cursor='pointer'
       className='group'
       overflow='hidden'
-      {...rest}
-    >
+      {...rest}>
       <ChakraNextUnwrappedImage
         w='auto'
         h='auto'
@@ -54,7 +53,7 @@ const ChakraNextImage = (props: ImageProps & FlexProps) => {
         placeholder='blur'
         objectFit='contain'
         blurDataURL={`data:image/svg+xml;base64,${toBase64(
-          shimmer(+width, +height),
+          shimmer(+width, +height)
         )}`}
         src={src}
         alt={alt}

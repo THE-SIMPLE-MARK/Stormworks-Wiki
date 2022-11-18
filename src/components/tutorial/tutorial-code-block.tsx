@@ -42,8 +42,7 @@ const CodeBlock = ({ path, code, showLineNumbers = false }: CodeBlockProps) => {
               onClick={() => {
                 sandpack.openFile(path)
                 sandpack.updateFile(path, code)
-              }}
-            >
+              }}>
               Copy to Sandbox
             </Button>
             <Button
@@ -53,8 +52,7 @@ const CodeBlock = ({ path, code, showLineNumbers = false }: CodeBlockProps) => {
               leftIcon={<Icon as={RiFileTransferLine} />}
               onClick={() => {
                 sandpack.openFile(path)
-              }}
-            >
+              }}>
               Open File
             </Button>
           </ButtonGroup>

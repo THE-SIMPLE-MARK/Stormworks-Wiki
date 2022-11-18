@@ -50,8 +50,7 @@ function NavLink({ href, children }: NavLinkProps) {
         color={isActive ? 'white' : undefined}
         _hover={{
           bg: isActive ? 'blue.500' : bgActiveHoverColor,
-        }}
-      >
+        }}>
         {children}
       </Center>
     </GridItem>
@@ -101,8 +100,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
             transition={{ duration: 0.08 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+            exit={{ opacity: 0 }}>
             <Flex
               direction='column'
               w='100%'
@@ -113,8 +111,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
               top='0'
               left='0'
               zIndex={20}
-              pb='8'
-            >
+              pb='8'>
               <Box>
                 <Flex justify='space-between' px='6' pt='5' pb='4'>
                   <Logo sx={{ rect: { fill: 'blue.300' } }} />
@@ -129,9 +126,8 @@ export function MobileNavContent(props: MobileNavContentProps) {
                   pt='2'
                   shadow={shadow}
                   templateColumns='repeat(2, 1fr)'
-                  gap='2'
-                >
-                  {mainNavLinks.map((item) => (
+                  gap='2'>
+                  {mainNavLinks.map(item => (
                     <NavLink href={item.href} key={item.label}>
                       {item.label}
                     </NavLink>
@@ -140,10 +136,9 @@ export function MobileNavContent(props: MobileNavContentProps) {
               </Box>
 
               <ScrollView
-                onScroll={(scrolled) => {
+                onScroll={scrolled => {
                   setShadow(scrolled ? 'md' : undefined)
-                }}
-              >
+                }}>
                 <SidebarContent
                   pathname={pathname}
                   routes={getRoutes(asPath)}
@@ -199,5 +194,5 @@ export const MobileNavButton = forwardRef(
         {...props}
       />
     )
-  },
+  }
 )

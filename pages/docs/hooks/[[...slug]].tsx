@@ -10,7 +10,7 @@ export default function Page({
   const Component = useMDXComponent(doc?.body?.code)
   return (
     <MDXLayout frontmatter={doc?.frontMatter}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </MDXLayout>
@@ -18,12 +18,12 @@ export default function Page({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getDocByType('hooks').map((doc) => ({
+  const paths = getDocByType('hooks').map(doc => ({
     params: { slug: doc.slug.split('/').slice(3) },
   }))
   return { paths: paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async ctx => {
   return { props: { doc: getDocDoc(['hooks', ctx.params.slug]) } }
 }

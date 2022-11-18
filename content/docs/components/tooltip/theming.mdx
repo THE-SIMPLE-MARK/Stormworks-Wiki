@@ -113,7 +113,7 @@ how we can do that:
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 // define styles for custom variant
-const colorfulVariant = defineStyle((props) => {
+const colorfulVariant = defineStyle(props => {
   const { colorScheme: c } = props // add color scheme as a prop
   return {
     _light: {

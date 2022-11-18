@@ -13,7 +13,7 @@ export default function Page({
   const Component = useMDXComponent(doc.body.code)
   return (
     <MDXLayout frontmatter={doc.frontMatter}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </MDXLayout>
@@ -22,15 +22,15 @@ export default function Page({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allRecipes
-    .map((t) => t._id.replace('community/recipes/', '').replace('.mdx', ''))
-    .map((id) => ({ params: { slug: id.split('/') } }))
+    .map(t => t._id.replace('community/recipes/', '').replace('.mdx', ''))
+    .map(id => ({ params: { slug: id.split('/') } }))
   return { paths, fallback: false }
 }
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps = async ctx => {
   const params = toArray(ctx.params.slug)
-  const doc = allRecipes.find((receipe) =>
-    receipe._id.endsWith(`${params.join('/')}.mdx`),
+  const doc = allRecipes.find(receipe =>
+    receipe._id.endsWith(`${params.join('/')}.mdx`)
   )
   return { props: { doc } }
 }

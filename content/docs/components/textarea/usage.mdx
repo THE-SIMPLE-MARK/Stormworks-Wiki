@@ -27,7 +27,7 @@ import { Textarea } from '@chakra-ui/react'
 function Example() {
   let [value, setValue] = React.useState('')
 
-  let handleInputChange = (e) => {
+  let handleInputChange = e => {
     let inputValue = e.target.value
     setValue(inputValue)
   }
@@ -84,4 +84,3 @@ function ResizeExample() {
 ```jsx
 <Textarea isInvalid placeholder='Here is a sample placeholder' />
 ```
-

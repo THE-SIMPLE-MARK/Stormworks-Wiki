@@ -21,8 +21,7 @@ export function ComponentOverviewItem(props: Props) {
       role='group'
       borderWidth='1px'
       _dark={{ bg: 'whiteAlpha.50' }}
-      _hover={{ shadow: 'md' }}
-    >
+      _hover={{ shadow: 'md' }}>
       <Flex overflow='hidden' bg='gray.100'>
         <NextImage src={imageUrl} width={400} height={300} objectFit='cover' />
       </Flex>

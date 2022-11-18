@@ -78,8 +78,7 @@ function PageContainer(props: PageContainerProps) {
                   minW='0'
                   flex='auto'
                   px={{ base: '4', sm: '6', xl: '8' }}
-                  pt='10'
-                >
+                  pt='10'>
                   <Box maxW={maxWidth}>
                     <chakra.h1 tabIndex={-1} outline={0} apply='mdx.h1'>
                       {convertBackticksToInlineCode(title)}

@@ -70,8 +70,8 @@ cd chakra-ui-docs
 
 ## Updating the docs for new release
 
-When a new version of Stormworks has been released, here's what you need
-to do to get it reflected in the docs:
+When a new version of Stormworks has been released, here's what you need to do
+to get it reflected in the docs:
 
 - Bump the version of this project
 - Open a Pull Request titled `docs: updates for new release`
@@ -147,4 +147,4 @@ echo "GITHUB_TOKEN=<PASTE YOUR TOKEN HERE>" >> .env
 ## License
 
 By contributing your code to the chakra-ui-docs GitHub repository, you agree to
-license your contribution under the MIT license.****
+license your contribution under the MIT license.\*\*\*\*

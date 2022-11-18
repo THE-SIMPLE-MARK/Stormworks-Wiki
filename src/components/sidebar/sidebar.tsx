@@ -54,8 +54,7 @@ export function SidebarContent({
                 fontWeight='bold'
                 my='4'
                 textTransform='uppercase'
-                letterSpacing='wider'
-              >
+                letterSpacing='wider'>
                 {lvl1.title}
               </chakra.h4>
             )}
@@ -82,9 +81,8 @@ export function SidebarContent({
                   key={lvl2.path + index}
                   title={lvl2.title}
                   selected={selected}
-                  opened={opened}
-                >
-                  {sortedRoutes.map((lvl3) => (
+                  opened={opened}>
+                  {sortedRoutes.map(lvl3 => (
                     <SidebarLink key={lvl3.path} href={lvl3.path}>
                       <span>{convertBackticksToInlineCode(lvl3.title)}</span>
                       {lvl3.new && (
@@ -93,8 +91,7 @@ export function SidebarContent({
                           lineHeight='tall'
                           fontSize='10px'
                           variant='solid'
-                          colorScheme='purple'
-                        >
+                          colorScheme='purple'>
                           New
                         </Badge>
                       )}
@@ -131,8 +128,7 @@ const MainNavLink = ({ href, icon, children, isActive }: MainNavLinkProps) => {
         fontSize='sm'
         fontWeight={active ? 'semibold' : 'medium'}
         color={active ? 'accent' : 'fg-muted'}
-        _hover={{ color: active ? undefined : 'fg' }}
-      >
+        _hover={{ color: active ? undefined : 'fg' }}>
         <Center
           w='6'
           h='6'
@@ -140,8 +136,7 @@ const MainNavLink = ({ href, icon, children, isActive }: MainNavLinkProps) => {
           bg={active ? 'accent-static' : 'transparent'}
           borderColor={active ? 'accent-static' : undefined}
           rounded='base'
-          color={active ? 'white' : 'accent'}
-        >
+          color={active ? 'white' : 'accent'}>
           {icon}
         </Center>
         <span>{children}</span>
@@ -199,14 +194,13 @@ export const MainNavLinkGroup = (props: ListProps) => {
   const router = useRouter()
   return (
     <List spacing='4' styleType='none' {...props}>
-      {mainNavLinks.map((item) => (
+      {mainNavLinks.map(item => (
         <ListItem key={item.label}>
           <MainNavLink
             icon={item.icon}
             href={item.href}
             label={item.label}
-            isActive={item.match?.(router.asPath, item.href)}
-          >
+            isActive={item.match?.(router.asPath, item.href)}>
             {item.label}
           </MainNavLink>
         </ListItem>
@@ -236,8 +230,7 @@ const Sidebar = ({ routes }) => {
       overflowY='auto'
       className='sidebar-content'
       flexShrink={0}
-      display={{ base: 'none', md: 'block' }}
-    >
+      display={{ base: 'none', md: 'block' }}>
       <MainNavLinkGroup mb='10' />
       <SidebarContent routes={routes} pathname={pathname} contentRef={ref} />
     </Box>

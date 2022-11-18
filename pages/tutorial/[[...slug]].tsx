@@ -13,7 +13,7 @@ export default function Page({
   const Component = useMDXComponent(tutorial.body.code)
   return (
     <TutorialLayout frontmatter={tutorial.frontMatter}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </TutorialLayout>
@@ -22,15 +22,15 @@ export default function Page({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const tutorials = allTutorials
-    .map((t) => t._id.replace('tutorial/', '').replace('.mdx', ''))
-    .map((id) => ({ params: { slug: id.split('/') } }))
+    .map(t => t._id.replace('tutorial/', '').replace('.mdx', ''))
+    .map(id => ({ params: { slug: id.split('/') } }))
   return { paths: tutorials, fallback: false }
 }
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps = async ctx => {
   const params = toArray(ctx.params.slug)
-  const tutorial = allTutorials.find((tutorial) =>
-    tutorial._id.includes(params.join('/')),
+  const tutorial = allTutorials.find(tutorial =>
+    tutorial._id.includes(params.join('/'))
   )
   return { props: { tutorial } }
 }

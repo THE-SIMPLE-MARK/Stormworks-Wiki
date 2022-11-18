@@ -18,8 +18,7 @@ export default function TocNav({ children, title, ...rest }: BoxProps) {
       maxHeight='calc(100vh - 8rem)'
       overflowY='auto'
       sx={{ overscrollBehavior: 'contain' }}
-      {...rest}
-    >
+      {...rest}>
       {title && (
         <Text
           as='h2'
@@ -29,8 +28,7 @@ export default function TocNav({ children, title, ...rest }: BoxProps) {
           fontSize='xs'
           color='gray.700'
           _dark={{ color: 'gray.400' }}
-          letterSpacing='wide'
-        >
+          letterSpacing='wide'>
           {title}
         </Text>
       )}

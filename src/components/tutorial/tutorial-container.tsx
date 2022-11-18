@@ -96,8 +96,7 @@ function TutorialContainer({
                   spacing='4'
                   as='section'
                   mt={['20', null, '40']}
-                  textAlign='center'
-                >
+                  textAlign='center'>
                   <Heading>{t('tutorialError.heading')}</Heading>
                   <Text fontSize={{ md: 'xl' }}>
                     {t('tutorialError.message')}
@@ -109,14 +108,12 @@ function TutorialContainer({
                     aria-label='Reload'
                     colorScheme='blue'
                     size='lg'
-                    onClick={() => window.location.reload()}
-                  >
+                    onClick={() => window.location.reload()}>
                     {t('tutorialError.reload')}
                   </Button>
                 </VStack>
               </Center>
-            )}
-          >
+            )}>
             {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
             {/* @ts-ignore - sandpack has not yet fully provided React 18 support */}
             <SandpackProvider
@@ -128,15 +125,13 @@ function TutorialContainer({
               theme={nightOwl}
               style={{
                 color: 'inherit',
-              }}
-            >
+              }}>
               <div>
                 <HStack spacing={0}>
                   <Box
                     overflowY={'auto'}
                     minW={{ base: '40%', xl: '35%' }}
-                    h='calc(100vh - 4.5rem)'
-                  >
+                    h='calc(100vh - 4.5rem)'>
                     <HStack
                       bg='white'
                       _dark={{ bg: 'gray.800' }}
@@ -146,8 +141,7 @@ function TutorialContainer({
                       pb='4'
                       pt='1'
                       pl='6'
-                      spacing={4}
-                    >
+                      spacing={4}>
                       {sidebar}
                       <chakra.h1 tabIndex={-1} outline={0} apply='mdx.h1'>
                         {title}
@@ -167,8 +161,7 @@ function TutorialContainer({
                         borderRadius: 0,
                         borderTop: 'none',
                         borderBottom: 'none',
-                      }}
-                    >
+                      }}>
                       <Stack h='calc(100vh - 4.5rem)' w={'full'}>
                         <SandpackCodeEditor
                           showLineNumbers

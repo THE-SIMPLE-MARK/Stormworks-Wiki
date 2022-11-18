@@ -470,9 +470,9 @@ version: 1.4.2
   // We're convert `colors.red.200` to `var(--chakra-colors-red-200)`
   <Box
     sx={{
-      "--banner-color": "colors.red.200",
-      "& .banner": {
-        bg: "var(--banner-color)",
+      '--banner-color': 'colors.red.200',
+      '& .banner': {
+        bg: 'var(--banner-color)',
       },
     }}
   />
@@ -484,9 +484,9 @@ version: 1.4.2
   <Box
     sx={{
       // evaluates to #fff if `colors.red.1000` doesn't exists in theme map
-      "--banner-color": "colors.red.1000, #fff",
-      "& .banner": {
-        bg: "var(--banner-color)",
+      '--banner-color': 'colors.red.1000, #fff',
+      '& .banner': {
+        bg: 'var(--banner-color)',
       },
     }}
   />
@@ -500,9 +500,9 @@ version: 1.4.2
   ```jsx
   <Box
     sx={{
-      "--banner-color": ["colors.red.200", "colors.pink.400"],
-      "& .banner": {
-        bg: "var(--banner-color)",
+      '--banner-color': ['colors.red.200', 'colors.pink.400'],
+      '& .banner': {
+        bg: 'var(--banner-color)',
       },
     }}
   />

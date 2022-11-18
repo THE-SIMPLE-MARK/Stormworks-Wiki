@@ -21,34 +21,34 @@ version: 1.8.0
   with a CSS condition.
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      900: "#171923",
+      900: '#171923',
     },
   })
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="gray.900">will always be gray.900</Text>
+      <Text color='gray.900'>will always be gray.900</Text>
     </ChakraProvider>
   )
   ```
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      50: "#F7FAFC",
-      900: "#171923",
+      50: '#F7FAFC',
+      900: '#171923',
     },
     semanticTokens: {
       colors: {
         text: {
-          default: "gray.900",
-          _dark: "gray.50",
+          default: 'gray.900',
+          _dark: 'gray.50',
         },
       },
     },
@@ -56,7 +56,7 @@ version: 1.8.0
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="text">
+      <Text color='text'>
         will be gray.900 in light mode and gray.50 in dark mode
       </Text>
     </ChakraProvider>
@@ -64,31 +64,31 @@ version: 1.8.0
   ```
 
   ```tsx live=false
-  import { extendTheme } from "@chakra-ui/react"
+  import { extendTheme } from '@chakra-ui/react'
 
   const theme = extendTheme({
     colors: {
       red: {
-        100: "#ff0010",
-        400: "#ff0040",
-        500: "#ff0050",
-        700: "#ff0070",
-        800: "#ff0080",
+        100: '#ff0010',
+        400: '#ff0040',
+        500: '#ff0050',
+        700: '#ff0070',
+        800: '#ff0080',
       },
     },
     semanticTokens: {
       colors: {
-        error: "red.500", // create a token alias
-        success: "red.100",
+        error: 'red.500', // create a token alias
+        success: 'red.100',
         primary: {
           // set variable conditionally with pseudo selectors like `_dark` and `_light`
           // use `default` to define fallback value
-          default: "red.500",
-          _dark: "red.400",
+          default: 'red.500',
+          _dark: 'red.400',
         },
         secondary: {
-          default: "red.800",
-          _dark: "red.700",
+          default: 'red.800',
+          _dark: 'red.700',
         },
       },
     },
@@ -182,34 +182,34 @@ version: 1.8.0
   with a CSS condition.
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      900: "#171923",
+      900: '#171923',
     },
   })
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="gray.900">will always be gray.900</Text>
+      <Text color='gray.900'>will always be gray.900</Text>
     </ChakraProvider>
   )
   ```
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      50: "#F7FAFC",
-      900: "#171923",
+      50: '#F7FAFC',
+      900: '#171923',
     },
     semanticTokens: {
       colors: {
         text: {
-          default: "gray.900",
-          _dark: "gray.50",
+          default: 'gray.900',
+          _dark: 'gray.50',
         },
       },
     },
@@ -217,7 +217,7 @@ version: 1.8.0
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="text">
+      <Text color='text'>
         will be gray.900 in light mode and gray.50 in dark mode
       </Text>
     </ChakraProvider>
@@ -225,31 +225,31 @@ version: 1.8.0
   ```
 
   ```tsx live=false
-  import { extendTheme } from "@chakra-ui/react"
+  import { extendTheme } from '@chakra-ui/react'
 
   const theme = extendTheme({
     colors: {
       red: {
-        100: "#ff0010",
-        400: "#ff0040",
-        500: "#ff0050",
-        700: "#ff0070",
-        800: "#ff0080",
+        100: '#ff0010',
+        400: '#ff0040',
+        500: '#ff0050',
+        700: '#ff0070',
+        800: '#ff0080',
       },
     },
     semanticTokens: {
       colors: {
-        error: "red.500", // create a token alias
-        success: "red.100",
+        error: 'red.500', // create a token alias
+        success: 'red.100',
         primary: {
           // set variable conditionally with pseudo selectors like `_dark` and `_light`
           // use `default` to define fallback value
-          default: "red.500",
-          _dark: "red.400",
+          default: 'red.500',
+          _dark: 'red.400',
         },
         secondary: {
-          default: "red.800",
-          _dark: "red.700",
+          default: 'red.800',
+          _dark: 'red.700',
         },
       },
     },
@@ -306,34 +306,34 @@ version: 1.8.0
   with a CSS condition.
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      900: "#171923",
+      900: '#171923',
     },
   })
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="gray.900">will always be gray.900</Text>
+      <Text color='gray.900'>will always be gray.900</Text>
     </ChakraProvider>
   )
   ```
 
   ```tsx live=false
-  import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+  import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
   const customTheme = extendTheme({
     colors: {
-      50: "#F7FAFC",
-      900: "#171923",
+      50: '#F7FAFC',
+      900: '#171923',
     },
     semanticTokens: {
       colors: {
         text: {
-          default: "gray.900",
-          _dark: "gray.50",
+          default: 'gray.900',
+          _dark: 'gray.50',
         },
       },
     },
@@ -341,7 +341,7 @@ version: 1.8.0
 
   const App = () => (
     <ChakraProvider theme={customTheme}>
-      <Text color="text">
+      <Text color='text'>
         will be gray.900 in light mode and gray.50 in dark mode
       </Text>
     </ChakraProvider>
@@ -349,31 +349,31 @@ version: 1.8.0
   ```
 
   ```tsx live=false
-  import { extendTheme } from "@chakra-ui/react"
+  import { extendTheme } from '@chakra-ui/react'
 
   const theme = extendTheme({
     colors: {
       red: {
-        100: "#ff0010",
-        400: "#ff0040",
-        500: "#ff0050",
-        700: "#ff0070",
-        800: "#ff0080",
+        100: '#ff0010',
+        400: '#ff0040',
+        500: '#ff0050',
+        700: '#ff0070',
+        800: '#ff0080',
       },
     },
     semanticTokens: {
       colors: {
-        error: "red.500", // create a token alias
-        success: "red.100",
+        error: 'red.500', // create a token alias
+        success: 'red.100',
         primary: {
           // set variable conditionally with pseudo selectors like `_dark` and `_light`
           // use `default` to define fallback value
-          default: "red.500",
-          _dark: "red.400",
+          default: 'red.500',
+          _dark: 'red.400',
         },
         secondary: {
-          default: "red.800",
-          _dark: "red.700",
+          default: 'red.800',
+          _dark: 'red.700',
         },
       },
     },
@@ -387,7 +387,7 @@ version: 1.8.0
 
   ```jsx live=false
   // Now you can use only colors from the theme
-  import colors from "@chakra-ui/theme/foundations/colors"
+  import colors from '@chakra-ui/theme/foundations/colors'
   ```
 
   Here's a table of the theme parts and entrypoints
@@ -428,7 +428,7 @@ version: 1.8.0
   `flatten`
 
   ```ts
-  import { flatten } from "@chakra-ui/utils"
+  import { flatten } from '@chakra-ui/utils'
 
   flatten({ space: [0, 1, 2, 4, 8, 16, 32] })
   /** =>

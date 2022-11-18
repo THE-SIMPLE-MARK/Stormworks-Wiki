@@ -1,14 +1,13 @@
 import React from 'react'
 
-const StorybookIcon = (props) => (
+const StorybookIcon = props => (
   <svg
     aria-hidden='true'
     focusable='false'
     width='24'
     height='24'
     viewBox='0 0 24 24'
-    {...props}
-  >
+    {...props}>
     <g fill='currentColor'>
       <path
         fillRule='evenodd'

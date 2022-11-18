@@ -16,7 +16,7 @@ export default function Page({
   const Component = useMDXComponent(doc?.body?.code)
   return (
     <ComponentDocsLayout frontmatter={doc?.frontMatter} tabsData={tabsData}>
-			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore */}
       <Component components={MDXComponents} />
     </ComponentDocsLayout>
@@ -27,15 +27,15 @@ export default function Page({
 // @ts-ignore
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = uniq(
-    getDocByType('components').flatMap((doc) => [
+    getDocByType('components').flatMap(doc => [
       doc.slug,
       `/${doc._raw.sourceFileDir}`,
-    ]),
+    ])
   )
   return { paths: paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async ctx => {
   const tabsData = getComponentTabsData(['components', ctx.params.slug])
   return {
     props: {

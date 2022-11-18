@@ -184,8 +184,7 @@ function InitialFocus() {
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
         isOpen={isOpen}
-        onClose={onClose}
-      >
+        onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Create your account</ModalHeader>
@@ -301,8 +300,7 @@ function TransitionExample() {
         isCentered
         onClose={onClose}
         isOpen={isOpen}
-        motionPreset='slideInBottom'
-      >
+        motionPreset='slideInBottom'>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
@@ -355,8 +353,7 @@ function ScrollingExample() {
         onClose={onClose}
         finalFocusRef={btnRef}
         isOpen={isOpen}
-        scrollBehavior={scrollBehavior}
-      >
+        scrollBehavior={scrollBehavior}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
@@ -384,7 +381,7 @@ function SizeExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = React.useState('md')
 
-  const handleSizeClick = (newSize) => {
+  const handleSizeClick = newSize => {
     setSize(newSize)
     onOpen()
   }
@@ -393,12 +390,11 @@ function SizeExample() {
 
   return (
     <>
-      {sizes.map((size) => (
+      {sizes.map(size => (
         <Button
           onClick={() => handleSizeClick(size)}
           key={size}
-          m={4}
-        >{`Open ${size} Modal`}</Button>
+          m={4}>{`Open ${size} Modal`}</Button>
       ))}
 
       <Modal onClose={onClose} size={size} isOpen={isOpen}>
@@ -478,8 +474,7 @@ function BackdropExample() {
         onClick={() => {
           setOverlay(<OverlayOne />)
           onOpen()
-        }}
-      >
+        }}>
         Use Overlay one
       </Button>
       <Button
@@ -487,8 +482,7 @@ function BackdropExample() {
         onClick={() => {
           setOverlay(<OverlayTwo />)
           onOpen()
-        }}
-      >
+        }}>
         Use Overlay two
       </Button>
       <Modal isCentered isOpen={isOpen} onClose={onClose}>

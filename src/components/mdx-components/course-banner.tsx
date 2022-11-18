@@ -21,8 +21,7 @@ const CourseBanner = ({
       href={href}
       rounded='lg'
       overflow='hidden'
-      _hover={{ shadow: 'md' }}
-    >
+      _hover={{ shadow: 'md' }}>
       <NextImage
         src={image}
         alt='Egghead Logo'
@@ -44,8 +43,7 @@ export const FeaturesCourses = () => {
     <SimpleGrid
       mt='10'
       columns={{ base: 1, lg: 2 }}
-      spacing={{ base: '4', md: '8' }}
-    >
+      spacing={{ base: '4', md: '8' }}>
       <CourseBanner
         image='/course-banners/egghead-course.png'
         title='Egghead Course'

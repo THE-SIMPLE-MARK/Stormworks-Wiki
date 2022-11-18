@@ -60,8 +60,7 @@ function SidebarCategory(props: SidebarCategoryProps) {
         alignItems='center'
         justifyContent='space-between'
         userSelect='none'
-        color='accent'
-      >
+        color='accent'>
         {title}
       </chakra.p>
       <Stack role='group' hidden={!toggle} mt='16px' mx='-3'>

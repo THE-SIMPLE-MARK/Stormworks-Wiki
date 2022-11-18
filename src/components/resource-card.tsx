@@ -41,8 +41,7 @@ function ResourceCard(props: ResourceCardProps) {
       _hover={{
         transform: 'scale(1.025)',
         boxShadow: 'var(--chakra-shadows-md)',
-      }}
-    >
+      }}>
       <VStack spacing={2} align='stretch'>
         <Wrap spacing='3' mb='2' align='center'>
           {tags?.map((tag, index) => (
@@ -55,8 +54,7 @@ function ResourceCard(props: ResourceCardProps) {
                 textTransform='uppercase'
                 fontSize='xs'
                 fontWeight='bold'
-                whiteSpace='break-spaces'
-              >
+                whiteSpace='break-spaces'>
                 {tag}
               </Badge>
             </WrapItem>

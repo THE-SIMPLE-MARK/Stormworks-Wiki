@@ -33,8 +33,7 @@ const SponsorButton = (props: BoxProps) => (
     _focus={{
       boxShadow: 'outline',
     }}
-    {...props}
-  >
+    {...props}>
     <Icon as={FaHeart} w='4' h='4' color='red.500' mr='2' />
     <Box as='strong' lineHeight='inherit' fontWeight='semibold'>
       {t('component.sponsor-button.sponsor')}

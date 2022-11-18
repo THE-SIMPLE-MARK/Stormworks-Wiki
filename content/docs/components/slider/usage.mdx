@@ -65,8 +65,7 @@ or applying image filters.
   aria-label='slider-ex-3'
   defaultValue={30}
   orientation='vertical'
-  minH='32'
->
+  minH='32'>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
@@ -121,7 +120,7 @@ function SliderMarkExample() {
 
   return (
     <Box pt={6} pb={2}>
-      <Slider aria-label='slider-ex-6' onChange={(val) => setSliderValue(val)}>
+      <Slider aria-label='slider-ex-6' onChange={val => setSliderValue(val)}>
         <SliderMark value={25} {...labelStyles}>
           25%
         </SliderMark>
@@ -138,8 +137,7 @@ function SliderMarkExample() {
           color='white'
           mt='-10'
           ml='-5'
-          w='12'
-        >
+          w='12'>
           {sliderValue}%
         </SliderMark>
         <SliderTrack>
@@ -165,10 +163,9 @@ function SliderThumbWithTooltip() {
       min={0}
       max={100}
       colorScheme='teal'
-      onChange={(v) => setSliderValue(v)}
+      onChange={v => setSliderValue(v)}
       onMouseEnter={() => setShowTooltip(true)}
-      onMouseLeave={() => setShowTooltip(false)}
-    >
+      onMouseLeave={() => setShowTooltip(false)}>
       <SliderMark value={25} mt='1' ml='-2.5' fontSize='sm'>
         25%
       </SliderMark>
@@ -187,8 +184,7 @@ function SliderThumbWithTooltip() {
         color='white'
         placement='top'
         isOpen={showTooltip}
-        label={`${sliderValue}%`}
-      >
+        label={`${sliderValue}%`}>
         <SliderThumb />
       </Tooltip>
     </Slider>
@@ -203,7 +199,7 @@ interested in the final result after sliding is complete. You can use
 `onChangeEnd` for this.
 
 ```jsx live=false
-<Slider aria-label='slider-ex-5' onChangeEnd={(val) => console.log(val)}>
+<Slider aria-label='slider-ex-5' onChangeEnd={val => console.log(val)}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>

@@ -30,7 +30,7 @@ export default function App() {
     <ChakraProvider>
       <Center h='100vh'>
         <List spacing={2}>
-          {usernames.map((username) => (
+          {usernames.map(username => (
             <ListItem key={username} p={2} bg='gray.100' rounded='lg'>
               <Text>{username}</Text>
             </ListItem>

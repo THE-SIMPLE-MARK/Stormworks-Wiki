@@ -109,7 +109,7 @@ scheme and a bold one that is black and white. Here's how we can do that:
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 // define styles for custom variant
-const colorfulVariant = defineStyle((props) => {
+const colorfulVariant = defineStyle(props => {
   const { colorScheme: c } = props // add color scheme as a prop
   return {
     _light: {
@@ -123,7 +123,7 @@ const colorfulVariant = defineStyle((props) => {
   }
 })
 
-const boldVariant = defineStyle((props) => {
+const boldVariant = defineStyle(props => {
   return {
     borderRadius: 'none',
     border: '2px solid',

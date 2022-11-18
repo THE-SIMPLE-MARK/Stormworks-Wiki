@@ -10,7 +10,7 @@ export function filterResources(query: string, resources: Resource[]) {
 
   return normalizedQuery !== ''
     ? resources.filter((resource: Resource) =>
-        resource.heading.toLowerCase().includes(normalizedQuery),
+        resource.heading.toLowerCase().includes(normalizedQuery)
       )
     : resources
 }

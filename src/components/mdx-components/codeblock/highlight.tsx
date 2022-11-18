@@ -15,12 +15,12 @@ const calculateLinesToHighlight = (meta: string) => {
   }
   const lineNumbers = RE.exec(meta)[1]
     .split(`,`)
-    .map((v) => v.split(`-`).map((x) => parseInt(x, 10)))
+    .map(v => v.split(`-`).map(x => parseInt(x, 10)))
 
   return (index: number) => {
     const lineNumber = index + 1
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
     )
     return inRange
   }
@@ -48,8 +48,7 @@ function Highlight({
       {...defaultProps}
       code={codeString}
       language={language}
-      {...props}
-    >
+      {...props}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <div style={liveEditorStyle} data-language={language}>
           <pre className={className} style={style}>
@@ -60,8 +59,7 @@ function Highlight({
                   key={i}
                   px='5'
                   bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
-                  {...lineProps}
-                >
+                  {...lineProps}>
                   {showLines && (
                     <chakra.span opacity={0.3} mr='6' fontSize='xs'>
                       {i + 1}

@@ -12,8 +12,10 @@ import { themes } from 'utils/available-themes'
 
 function MDXContent({ doc }: { doc: Doc | undefined }) {
   const Component = useMDXComponent(doc?.body?.code ?? '')
-	{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore */}
+  {
+    /* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore */
+  }
   return <Component components={MDXComponents} />
 }
 
@@ -44,7 +46,7 @@ export default function ComponentDocsLayout({
 
       <Box as='nav' aria-label='Component navigation' mt='8'>
         <HStack as='ul' listStyleType='none' borderBottomWidth='1px'>
-          {tabsData.map((item) => (
+          {tabsData.map(item => (
             <Box as='li' key={item.id}>
               <NextLink href={item.href} passHref replace>
                 <Box
@@ -60,8 +62,7 @@ export default function ComponentDocsLayout({
                   _selected={{
                     color: 'accent',
                     borderColor: 'currentColor',
-                  }}
-                >
+                  }}>
                   {item.label}
                 </Box>
               </NextLink>
@@ -75,8 +76,7 @@ export default function ComponentDocsLayout({
           key={index}
           id={item.id}
           hidden={!tabsData[index].match}
-          pt={index === 2 ? 12 : 0}
-        >
+          pt={index === 2 ? 12 : 0}>
           {index === 0 ? children : <MDXContent doc={item.doc} />}
         </Box>
       ))}

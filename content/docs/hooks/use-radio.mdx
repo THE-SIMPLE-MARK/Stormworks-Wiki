@@ -34,7 +34,7 @@ The `useRadio` hook returns following props
 
 ```jsx
 function Example() {
-  const CustomRadio = (props) => {
+  const CustomRadio = props => {
     const { image, ...radioProps } = props
     const { state, getInputProps, getCheckboxProps, htmlProps, getLabelProps } =
       useRadio(radioProps)
@@ -47,8 +47,7 @@ function Example() {
           bg={state.isChecked ? 'green.200' : 'transparent'}
           w={12}
           p={1}
-          rounded='full'
-        >
+          rounded='full'>
           <Image src={image} rounded='full' {...getLabelProps()} />
         </Box>
       </chakra.label>

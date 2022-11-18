@@ -17,7 +17,13 @@ import * as React from 'react'
 import { DiGithubBadge } from 'react-icons/di'
 import { FaArrowRight, FaDiscord } from 'react-icons/fa'
 import { FiBookOpen, FiGithub, FiUsers } from 'react-icons/fi'
-import { MdOutlineViewInAr, MdOutlineDirectionsBoat, MdBook, MdOndemandVideo, MdUpdate } from 'react-icons/md'
+import {
+  MdOutlineViewInAr,
+  MdOutlineDirectionsBoat,
+  MdBook,
+  MdOndemandVideo,
+  MdUpdate,
+} from 'react-icons/md'
 import Container from 'components/container'
 import { DiscordStrip } from 'components/discord-strip'
 import { Footer } from 'components/footer'
@@ -37,16 +43,14 @@ const Feature = ({ title, icon, children, ...props }) => {
       shadow='base'
       p='40px'
       _dark={{ bg: 'gray.700' }}
-      {...props}
-    >
+      {...props}>
       <Flex
         rounded='full'
         w='12'
         h='12'
         bg='blue.500'
         align='center'
-        justify='center'
-      >
+        justify='center'>
         <Icon fontSize='24px' color='white' as={icon} />
       </Flex>
       <Heading as='h3' size='md' fontWeight='semibold' mt='1em' mb='0.5em'>
@@ -74,8 +78,7 @@ const StatBox = (props: StatBoxProps) => {
       pl={{ base: '0', md: '8' }}
       borderLeft='2px solid'
       borderLeftColor='yellow.200'
-      {...rest}
-    >
+      {...rest}>
       <Box fontSize={{ base: '4rem', md: '6rem' }} lineHeight='1em' mb='20px'>
         {title}
       </Box>
@@ -117,27 +120,25 @@ const HomePage = ({
                 letterSpacing='tighter'
                 fontWeight='extrabold'
                 mb='16px'
-                lineHeight='1.2'
-              >
+                lineHeight='1.2'>
                 {t('homepage.title.main')}
               </chakra.h1>
 
-							<chakra.h1
-							  maxW='50ch'
-								mx='auto'
-								fontSize={{ base: '1.25rem', sm: '2rem', lg: '2.5rem' }}
-								fontFamily='heading'
-								letterSpacing='tighter'
-								fontWeight='extrabold'
-								mb='16px'
-								lineHeight='1.2'
-							>
-								{t('homepage.title.highlighted')}
-								<Box as='span' color='blue.500' _dark={{ color: 'blue.300' }}>
+              <chakra.h1
+                maxW='50ch'
+                mx='auto'
+                fontSize={{ base: '1.25rem', sm: '2rem', lg: '2.5rem' }}
+                fontFamily='heading'
+                letterSpacing='tighter'
+                fontWeight='extrabold'
+                mb='16px'
+                lineHeight='1.2'>
+                {t('homepage.title.highlighted')}
+                <Box as='span' color='blue.500' _dark={{ color: 'blue.300' }}>
                   {' '}
                   For Stormworks
                 </Box>
-							</chakra.h1>
+              </chakra.h1>
 
               <Text
                 maxW='560px'
@@ -145,8 +146,7 @@ const HomePage = ({
                 color='gray.500'
                 _dark={{ color: 'gray.400' }}
                 fontSize={{ base: 'lg', lg: 'xl' }}
-                mt='6'
-              >
+                mt='6'>
                 {t('homepage.message')}
               </Text>
 
@@ -154,8 +154,7 @@ const HomePage = ({
                 mt='10'
                 spacing='4'
                 justify='center'
-                direction={{ base: 'column', sm: 'row' }}
-              >
+                direction={{ base: 'column', sm: 'row' }}>
                 <NextLink href='/getting-started' passHref>
                   <Button
                     h='4rem'
@@ -164,8 +163,7 @@ const HomePage = ({
                     as='a'
                     size='lg'
                     colorScheme='blue'
-                    rightIcon={<FaArrowRight fontSize='0.8em' />}
-                  >
+                    rightIcon={<FaArrowRight fontSize='0.8em' />}>
                     {t('homepage.browse-wiki')}
                   </Button>
                 </NextLink>
@@ -177,13 +175,11 @@ const HomePage = ({
                   fontSize='1.2rem'
                   href='https://github.com/THE-SIMPLE-MARK/Stormworks-Wiki/'
                   target='__blank'
-                  leftIcon={<DiGithubBadge size='1.5em' />}
-                >
+                  leftIcon={<DiGithubBadge size='1.5em' />}>
                   GitHub
                 </Button>
               </Stack>
             </Box>
-
           </Container>
         </Box>
 
@@ -215,48 +211,40 @@ const HomePage = ({
             <Grid
               templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
               gap={10}
-              px={{ md: 12 }}
-            >
+              px={{ md: 12 }}>
               <Feature
                 icon={MdOutlineViewInAr}
-                title={t('homepage.feature-section.components.title')}
-              >
+                title={t('homepage.feature-section.components.title')}>
                 {t('homepage.feature-section.components.description')}
               </Feature>
               <Feature
                 icon={MdBook}
-                title={t('homepage.feature-section.standards.title')}
-              >
+                title={t('homepage.feature-section.standards.title')}>
                 {t('homepage.feature-section.standards.description')}
               </Feature>
               <Feature
                 icon={MdOutlineDirectionsBoat}
-                title={t('homepage.feature-section.game-mechanics.title')}
-              >
+                title={t('homepage.feature-section.game-mechanics.title')}>
                 {t('homepage.feature-section.game-mechanics.description')}
               </Feature>
               <Feature
                 icon={MdOndemandVideo}
-                title={t('homepage.feature-section.tutorials.title')}
-              >
+                title={t('homepage.feature-section.tutorials.title')}>
                 {t('homepage.feature-section.tutorials.description')}
               </Feature>
               <Feature
                 icon={MdUpdate}
-                title={t('homepage.feature-section.continous-updates.title')}
-              >
+                title={t('homepage.feature-section.continous-updates.title')}>
                 {t('homepage.feature-section.continous-updates.description')}
               </Feature>
               <Feature
                 icon={FaDiscord}
-                title={t('homepage.feature-section.active-community.title')}
-              >
+                title={t('homepage.feature-section.active-community.title')}>
                 {t('homepage.feature-section.active-community.description')}
               </Feature>
             </Grid>
           </Container>
         </Box>
-
 
         <Box as='section' bg='blue.500'>
           <Container py='7.5rem' maxW='1280px' color='white'>
@@ -273,11 +261,10 @@ const HomePage = ({
               maxW='880px'
               mx='auto'
               spacing='4rem'
-              px={{ md: 12 }}
-            >
+              px={{ md: 12 }}>
               <StatBox
                 icon={FiBookOpen}
-                title={"23K"}
+                title={'23K'}
                 description={t('homepage.growing-section.views-per-month')}
               />
               <StatBox
@@ -299,7 +286,7 @@ const HomePage = ({
           </Container>
         </Box>
 
-{/*         <Box bg='blue.500'> 
+        {/*         <Box bg='blue.500'> 
           <Container py='120px' maxW='1200px' px='32px' color='white'>
             <Box maxW='560px' mx='auto' textAlign='center' mb='56px'>
               <chakra.h2 textStyle='heading-2' mb='4'>
@@ -431,13 +418,8 @@ const HomePage = ({
 }
 
 export async function getStaticProps() {
-  const [
-    { prettyCount: githubStars },
-    { prettyCount: discordMembers },
-  ] = await Promise.all([
-    getGithubStars(),
-    getDiscordMembers(),
-  ])
+  const [{ prettyCount: githubStars }, { prettyCount: discordMembers }] =
+    await Promise.all([getGithubStars(), getDiscordMembers()])
 
   const contributors = getAllContributors()
 
