@@ -1,6 +1,6 @@
 import { Box, Text, HStack, SimpleGrid } from '@chakra-ui/react'
 import * as React from 'react'
-import DiscordIcon from './docs/discord-logo'
+import DiscordIcon from './wiki/discord-logo'
 import { FaTwitter } from 'react-icons/fa'
 
 function CommunityCardItem({ children, accentColor, icon, href }) {

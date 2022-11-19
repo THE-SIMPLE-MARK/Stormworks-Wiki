@@ -8,7 +8,7 @@ import {
 import * as React from 'react'
 import { useScrollSpy } from 'hooks/use-scrollspy'
 import { t } from 'utils/i18n'
-import type { FrontmatterHeading } from 'src/types/frontmatter'
+import type { FrontmatterHeading } from 'types/frontmatter'
 import TocNav from './toc-nav'
 
 interface TableOfContentProps extends BoxProps {
@@ -29,7 +29,7 @@ function TableOfContent(props: TableOfContentProps) {
     <TocNav title={t('component.table-of-content.on-this-page')} {...rest}>
       <OrderedList spacing={1} ml='0' mt='4' styleType='none'>
         {headings.map(({ id, text, level }) => (
-          <ListItem key={id} title={text} ml={level === 'h3' ? '4' : undefined}>
+          <ListItem key={`${id}-${level}`} title={text} ml={level === 2 ? '4' : undefined}>
             <chakra.a
               py='1'
               display='block'

@@ -1,5 +1,5 @@
 import { isObject } from '@chakra-ui/utils'
-import { MDXComponents } from 'components/mdx-components'
+import DocComponents from 'components/doc-components'
 
 /**
  * Replace the code blocks wrapped in backticks
@@ -11,9 +11,9 @@ function toInlineCode(input: string) {
     .split(/(`\w+`)/)
     .map(chunk =>
       chunk.startsWith('`') && chunk.endsWith('`') ? (
-        <MDXComponents.code key={chunk}>
+        <DocComponents.code key={chunk}>
           {chunk.slice(1, -1)}
-        </MDXComponents.code>
+        </DocComponents.code>
       ) : (
         chunk
       )

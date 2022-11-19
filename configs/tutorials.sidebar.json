@@ -1,0 +1,35 @@
+{
+	"routes": [
+		{
+			"title": "Tutorials",
+			"heading": false,
+			"routes": [
+				{
+					"title": "Logic",
+					"path": "/wiki/tutorials/railwoad",
+					"sort": "true",
+					"open": true,
+					"summarize": true,
+					"routes": [
+						{
+							"title": "How to tune a PID",
+							"path": "/wiki/tutorials/how-to-tune-a-pid"
+						},
+						{
+							"title": "Some other tutorial",
+							"path": "/wiki/tutorials/mcs"
+						},
+						{
+							"title": "Yet another tutorial",
+							"path": "/wiki/tutorials/mcs"
+						},
+						{
+							"title": "Mmmm yes tutorials",
+							"path": "/wiki/tutorials/mcs"
+						}
+					] 
+				}
+			]
+		}
+	]
+}

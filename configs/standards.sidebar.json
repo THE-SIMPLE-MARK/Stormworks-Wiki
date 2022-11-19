@@ -1,0 +1,35 @@
+{
+	"routes": [
+		{
+			"title": "Standards",
+			"heading": false,
+			"routes": [
+				{
+					"title": "Railroad",
+					"path": "/wiki/standards/railwoad",
+					"sort": "true",
+					"open": true,
+					"summarize": true,
+					"routes": [
+						{
+							"title": "MCS",
+							"path": "/wiki/standards/mcs"
+						},
+						{
+							"title": "Some other standard",
+							"path": "/wiki/standards/mcs"
+						},
+						{
+							"title": "Yet another standard",
+							"path": "/wiki/standards/mcs"
+						},
+						{
+							"title": "Mmmm yes standards",
+							"path": "/wiki/standards/mcs"
+						}
+					] 
+				}
+			]
+		}
+	]
+}

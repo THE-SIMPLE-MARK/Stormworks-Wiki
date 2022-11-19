@@ -1,8 +1,8 @@
 import slugger from 'github-slugger'
 
-export function getTableOfContents(mdxContent: string) {
+export function getTableOfContents(docContent: string) {
   const regexp = new RegExp(/^(### |## )(.*)\n/, 'gm')
-  const headings = [...mdxContent.matchAll(regexp)]
+  const headings = [...docContent.matchAll(regexp)]
   let tableOfContents = []
 
   if (headings.length) {

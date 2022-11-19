@@ -11,14 +11,7 @@ import {
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { Fragment, ReactElement, ReactNode, useRef } from 'react'
-import {
-  FaFileAlt,
-  FaPalette,
-  FaTools,
-  FaGlobe,
-  FaCompass,
-  FaReadme,
-} from 'react-icons/fa'
+import { FaBook, FaGlobe, FaCompass, FaVideo } from 'react-icons/fa'
 import { BsFillGridFill } from 'react-icons/bs'
 import { convertBackticksToInlineCode } from 'utils/convert-backticks-to-inline-code'
 import { RouteItem, Routes } from 'utils/get-route-context'
@@ -148,45 +141,28 @@ const MainNavLink = ({ href, icon, children, isActive }: MainNavLinkProps) => {
 export const mainNavLinks = [
   {
     icon: <FaCompass />,
-    href: '/getting-started',
-    label: 'Getting Started',
+    href: '/wiki/world-locations',
+    label: 'World Locations',
   },
-  {
-    icon: <FaPalette />,
-    href: '/docs/styled-system/style-props',
-    label: 'Styled System',
-    match: (asPath: string, href: string) =>
-      href.startsWith('/docs/styled-system') &&
-      asPath.startsWith('/docs/styled-system'),
-  },
-  {
+	{
     icon: <BsFillGridFill />,
-    href: '/docs/components',
+    href: '/wiki/components',
     label: 'Components',
   },
   {
-    icon: <FaTools />,
-    href: '/docs/hooks/use-boolean',
-    label: 'Hooks',
-    match: (asPath: string, href: string) =>
-      href.startsWith('/docs/hooks') && asPath.startsWith('/docs/hooks'),
+    icon: <FaBook />,
+    href: '/wiki/standards',
+    label: 'Standards',
+  },
+  {
+    icon: <FaVideo />,
+    href: '/wiki/tutorials',
+    label: 'Tutorials',
   },
   {
     icon: <FaGlobe />,
     href: '/community/team',
     label: 'Community',
-    match: (asPath: string, href: string) =>
-      href.startsWith('/community') && asPath.startsWith('/community'),
-  },
-  {
-    icon: <FaFileAlt />,
-    href: '/changelog',
-    label: 'Changelog',
-  },
-  {
-    icon: <FaReadme />,
-    href: '/blog',
-    label: 'Blog',
   },
 ]
 
@@ -200,7 +176,7 @@ export const MainNavLinkGroup = (props: ListProps) => {
             icon={item.icon}
             href={item.href}
             label={item.label}
-            isActive={item.match?.(router.asPath, item.href)}>
+            isActive={router.asPath.startsWith(item.href)}>
             {item.label}
           </MainNavLink>
         </ListItem>

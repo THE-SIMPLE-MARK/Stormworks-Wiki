@@ -1,4 +1,4 @@
-import { Badge, Box, Flex, chakra } from '@chakra-ui/react'
+import { Box, Flex, chakra } from '@chakra-ui/react'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { useRouter } from 'next/router'
 import * as React from 'react'
@@ -9,7 +9,7 @@ import SEO from 'components/seo'
 import TableOfContent from 'components/table-of-content'
 import { convertBackticksToInlineCode } from 'utils/convert-backticks-to-inline-code'
 import { t } from 'utils/i18n'
-import { FrontmatterHeading } from 'src/types/frontmatter'
+import { FrontmatterHeading } from 'types/frontmatter'
 
 function useHeadingFocusOnRouteChange() {
   const router = useRouter()
@@ -49,7 +49,6 @@ function PageContainer(props: PageContainerProps) {
     children,
     leftSidebar,
     rightSidebar,
-    pagination,
     hideToc,
     maxWidth = '48rem',
   } = props
@@ -58,7 +57,7 @@ function PageContainer(props: PageContainerProps) {
 
   if (!frontmatter) return <></>
 
-  const { title, description, editUrl, version, headings = [] } = frontmatter
+  const { title, description, editUrl, headings = [] } = frontmatter
 
   return (
     <>
@@ -80,18 +79,15 @@ function PageContainer(props: PageContainerProps) {
                   px={{ base: '4', sm: '6', xl: '8' }}
                   pt='10'>
                   <Box maxW={maxWidth}>
-                    <chakra.h1 tabIndex={-1} outline={0} apply='mdx.h1'>
+                    <chakra.h1 tabIndex={-1} outline={0} apply='doc.h1'>
                       {convertBackticksToInlineCode(title)}
                     </chakra.h1>
-                    {version && (
-                      <Badge colorScheme='blue' letterSpacing='wider'>
-                        v{version}
-                      </Badge>
-                    )}
+										<chakra.p my={5}>
+											{description}
+										</chakra.p>
                     {children}
                     <Box mt='40px'>
                       <Box>{editUrl && <EditPageLink href={editUrl} />}</Box>
-                      {pagination || null}
                     </Box>
                     <Box pb='20'>
                       <Footer />

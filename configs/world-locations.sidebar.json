@@ -1,0 +1,35 @@
+{
+	"routes": [
+		{
+			"title": "World Locations",
+			"heading": false,
+			"routes": [
+				{
+					"title": "Sawyer Island",
+					"path": "/wiki/world-locations/blocks",
+					"sort": "true",
+					"open": true,
+					"summarize": true,
+					"routes": [
+						{
+							"title": "North Harbour",
+							"path": "/wiki/world-locations/north-harbour"
+						},
+						{
+							"title": "South Harbour",
+							"path": "/wiki/world-locations/south-harbour"
+						},
+						{
+							"title": "Harrison Airbase",
+							"path": "/wiki/world-locations/harrison-airbase"
+						},
+						{
+							"title": "ONeill Airbase",
+							"path": "/wiki/world-locations/oneill-airbase"
+						}
+					] 
+				}
+			]
+		}
+	]
+}

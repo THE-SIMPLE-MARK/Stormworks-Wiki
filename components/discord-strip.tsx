@@ -1,7 +1,7 @@
 import { Box, BoxProps, Flex, Heading, Text, chakra } from '@chakra-ui/react'
 import * as React from 'react'
 import Container from './container'
-import DiscordIcon from './docs/discord-logo'
+import DiscordIcon from './wiki/discord-logo'
 import { t } from 'utils/i18n'
 import siteConfig from 'configs/site-config.json'
 

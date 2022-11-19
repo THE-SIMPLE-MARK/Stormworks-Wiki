@@ -1,16 +1,21 @@
 export interface FrontmatterHeading {
-  level: string | number
+	id: string
+	level: number
   text: string
-  id: string
 }
 
 export interface Frontmatter {
-  slug?: string
-  title: string
-  description?: string
-  editUrl?: string
-  version?: string
+  id?: string,
+  title: string,
+  description?: string,
   headings?: FrontmatterHeading[]
-  publishedDate?: Date
-  authorData?: any
+	slug?: string,
+	url?: string,
+	editUrl?: string,
+	subCategory?: SubCategory,
 }
+
+type SubCategory =
+	"blocks" |
+	"logic" |
+	"propulsion"

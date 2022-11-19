@@ -132,7 +132,7 @@
         "learn-more": "Learn more"
       }
     },
-    "mdx-components": {
+    "doc-components": {
       "copy-button": {
         "copy": "copy",
         "copied": "copied"

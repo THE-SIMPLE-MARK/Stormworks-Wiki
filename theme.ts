@@ -63,7 +63,7 @@ const customTheme = extendTheme({
       fontWeight: 'bold',
     },
   },
-  mdx: {
+  doc: {
     h1: {
       mt: '2rem',
       mb: '.25rem',

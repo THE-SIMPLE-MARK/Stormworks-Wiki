@@ -9,14 +9,14 @@ import {
   Wrap,
 } from '@chakra-ui/react'
 import fs from 'fs'
-import MDXLayout from 'layouts/mdx'
+import DocLayout from 'layouts/doc'
 import NextImage from 'next/image'
 import { FaDiscord } from 'react-icons/fa'
 import {
   Contributor,
   Member as IMember,
   FormerMember as IFormerMember,
-} from 'src/types/contributors-members'
+} from 'types/contributors-members'
 import { t } from 'utils/i18n'
 
 function Member(props: { member: IMember }) {
@@ -79,7 +79,7 @@ interface TeamProps {
 
 function Team({ members, formerMembers, contributors }: TeamProps) {
   return (
-    <MDXLayout
+    <DocLayout
       frontmatter={{
         title: t('team.seo.title'),
         description: t('team.seo.description'),
@@ -129,7 +129,7 @@ function Team({ members, formerMembers, contributors }: TeamProps) {
           ))}
         </Wrap>
       </Stack>
-    </MDXLayout>
+    </DocLayout>
   )
 }
 

@@ -23,7 +23,7 @@ import Logo from './logo'
 import { mainNavLinks, SidebarContent } from './sidebar/sidebar'
 import SponsorButton from './sponsor-button'
 import useRouteChanged from 'hooks/use-route-changed'
-import { getRoutes } from 'layouts/mdx'
+import { getRoutes } from 'layouts/doc'
 
 type NavLinkProps = {
   href: string
