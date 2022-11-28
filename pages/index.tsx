@@ -155,7 +155,7 @@ const HomePage = ({
                 spacing='4'
                 justify='center'
                 direction={{ base: 'column', sm: 'row' }}>
-                <NextLink href='/getting-started' passHref>
+                <NextLink href='/wiki/components' passHref>
                   <Button
                     h='4rem'
                     px='40px'
