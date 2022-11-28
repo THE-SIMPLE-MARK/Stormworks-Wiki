@@ -1,6 +1,5 @@
 import * as Chakra from '@chakra-ui/react'
 import * as React from 'react'
-import PropsTable from '../props-table'
 import FrontmatterButton from './frontmatter-button'
 import { FeaturesCourses } from './course-banner'
 import IconsList from './icons-list'
@@ -76,7 +75,6 @@ const DocComponents = {
   ),
   FrontmatterButton,
   IconsList,
-  PropsTable,
   FrameworkLinks,
   VideoPlayer,
   AspectRatio,
