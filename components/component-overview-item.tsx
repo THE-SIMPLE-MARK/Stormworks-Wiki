@@ -1,4 +1,4 @@
-import { Flex, LinkBox, LinkOverlay, Text } from '@chakra-ui/react'
+import { Flex, LinkBox, LinkOverlay, Text, useColorModeValue } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import NextLink from 'next/link'
 
@@ -10,7 +10,7 @@ type Props = {
 
 export function ComponentOverviewItem(props: Props) {
   const { url, title, slug } = props
-  const imageUrl = `/components/${slug}.svg`
+  const imageUrl = `/resources/icons/components/${slug}.svg`
   return (
     <LinkBox
       as='article'
@@ -22,7 +22,7 @@ export function ComponentOverviewItem(props: Props) {
       borderWidth='1px'
       _dark={{ bg: 'whiteAlpha.50' }}
       _hover={{ shadow: 'md' }}>
-      <Flex overflow='hidden' bg='gray.100'>
+      <Flex overflow='hidden' bg={useColorModeValue("gray.100", "gray.700")}>
         <NextImage src={imageUrl} width={400} height={300} objectFit='cover' />
       </Flex>
 
