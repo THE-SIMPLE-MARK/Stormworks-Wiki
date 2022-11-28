@@ -1,14 +1,7 @@
 import * as Chakra from '@chakra-ui/react'
 import * as React from 'react'
 import FrontmatterButton from './frontmatter-button'
-import { FeaturesCourses } from './course-banner'
 import IconsList from './icons-list'
-import {
-  ColorPalette,
-  ColorPalettes,
-  ColorWrapper,
-} from 'components/color-palette'
-import { FrameworkLinks } from 'components/framework-link'
 import { Anchor } from 'components/doc-components/anchor'
 import { InlineCode } from 'components/doc-components/inline-code'
 import { LinkedHeading } from 'components/doc-components/linked-heading'
@@ -75,13 +68,8 @@ const DocComponents = {
   ),
   FrontmatterButton,
   IconsList,
-  FrameworkLinks,
   VideoPlayer,
   AspectRatio,
-  ColorPalette,
-  ColorPalettes,
-  ColorWrapper,
-  FeaturesCourses,
   JoinCommunityCards,
 	FrontmatterFooter,
 }
