@@ -10,7 +10,7 @@
   <a href="https://github.com/THE-SIMPLE-MARK/Stormworks-Wiki/blob/main/LICENSE">
   <img alt="MIT License" src="https://img.shields.io/github/license/THE-SIMPLE-MARK/Stormworks-Wiki"/>
   </a>
-  <img alt="Github Stars" src="https://badgen.net/github/stars/chakra-ui/chakra-ui" />
+  <img alt="Github Stars" src="https://badgen.net/github/stars/THE-SIMPLE-MARK/Stormworks-Wiki" />
   <a href="https://discord.gg/Wc2xp89Npd">
     <img alt="Discord" src="https://img.shields.io/discord/901248760959619102.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
   </a>
