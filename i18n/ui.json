@@ -73,8 +73,8 @@
     "title": "Ooops something broke",
     "description": "Error in the tutorial framework",
     "heading": "Ooops something broke 😭",
-    "message": "You just found a really nasty issue. We are aware of it. Just hit 'Reload' and code on!",
-    "submessage": "PS: Try to have no code selected in the sandbox before copying new code 😉",
+    "message": "You just found a really nasty issue. We are aware of it. Just hit 'Reload' and carry on!",
+    "submessage": "",
     "reload": "Reload"
   },
   "resources": {
