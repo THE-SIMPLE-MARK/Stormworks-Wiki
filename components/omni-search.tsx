@@ -153,7 +153,7 @@ function SearchButton(props: HTMLChakraProps<'button'>) {
       <SearchIcon />
       <HStack w='full' ml='3' spacing='4px'>
         <Text textAlign='left' flex='1'>
-          {t('component.search-bar.search-the-docs')}
+          {t('component.search-bar.search-the-wiki')}
         </Text>
         <HStack spacing='4px'>
           <VisuallyHidden>{t('component.search-bar.press')} </VisuallyHidden>

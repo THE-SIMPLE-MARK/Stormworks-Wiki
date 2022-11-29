@@ -5,9 +5,7 @@
       "highlighted": "The Unofficial Wiki"
     },
     "message": "StormWiki is a well-maintained open-source wikipedia for Stormworks. This wiki has documentation on main features, standards and more!",
-    "browse-wiki": "Read Wikipedia",
-    "supported-and-backed-by": "Supported and Backed by",
-    "your-company": "Your company",
+    "browse-wiki": "Browse Wikipedia",
     "less-searching-more-speed": "Less searching. More speed",
     "less-searching-description": "Spend less time searching for documentation and more time building creations.",
     "feature-section": {
@@ -46,19 +44,8 @@
       "contributors": "Contributors",
       "discord-members": "Discord members"
     },
-    "loved-by-product-people-section": {
-      "title": "Loved by product people like you"
-    },
-    "support-section": {
-      "title": "Support StormWiki 💖",
-      "description": "Our maintainers devote their time, effort, and heart to ensure StormWiki keeps getting better. Support us by donating to our collective 🙏",
-      "sponsor-the-maintainers": "Sponsor the StormWiki maintainers",
-      "sponsor-the-creator": "Sponsor the creator, PirateJake2000",
-      "organization-sponsors": "Organization Sponsors 🏦",
-      "individual-sponsors": "Individual Sponsors 🥇"
-    },
     "seo": {
-      "title": "Chakra UI - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
+      "title": "StormWiki - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
       "description": "Simple, Modular and Accessible UI Components for your React Applications. Built with Styled System"
     }
   },
@@ -77,88 +64,26 @@
     "submessage": "",
     "reload": "Reload"
   },
-  "resources": {
-    "title": "Community Resources",
-    "description": "A rich compilation of technical descriptions and detailed information of how Chakra UI works.",
-    "showcaseBannerTitle": "Visit the Showcase",
-    "showcaseBannerDescription": "See what other Devs made with Chakra UI. Those are community projects, websites, libraries, tools, articles and videos that you can use to get inspired, implement a feature, or learn Chakra UI.",
-    "message": "A rich compilation of technical descriptions and detailed information of how Chakra UI works.",
-    "searchFilter": {
-      "helperText": "Filter by resource title.",
-      "label": "Search",
-      "placeholder": "react"
-    },
-    "talks": {
-      "title": "Talks"
-    },
-    "videos": {
-      "title": "Videos"
-    },
-    "blogs": {
-      "title": "Blogs"
-    }
-  },
   "team": {
-    "title": "Chakra UI Team",
-    "message": "Amazing engineers who have contributed time, effort, and thought to Chakra UI. Without them, this project would not be possible.",
+    "title": "StormWiki Team",
+    "message": "Amazing engineers who have contributed time, effort, and thought to StormWiki. Without them, this project would not be possible.",
     "core-team": "Core Team 🤝",
     "former-members": "Former Core Team 🏅",
-    "our-sponsors": "Our Sponsors 💰",
-    "organizations": "Organizations",
-    "individuals": "Individuals",
     "project-contributors": "Project Contributors 💖",
     "seo": {
-      "title": "Chakra UI Team and Contributors",
-      "description": "List of team members and contributors that make the Chakra UI project possible"
+      "title": "StormWiki Team and Contributors",
+      "description": "List of team members and contributors that make the StormWiki project possible."
     }
   },
   "component": {
-    "chakra-pro": {
-      "ad-banner": {
-        "message": "Build faster with Premium Chakra UI Components 💎",
-        "learn-more": "Learn more"
-      },
-      "docs-page-ad": {
-        "message-bold": "Chakra UI Pro:",
-        "message": "Start your application or marketing site with a growing collection of beautiful and responsive UI components.",
-        "ads-via-chakra-ui": "Ads via Chakra UI"
-      },
-      "home-page-ad": {
-        "premium-components": "Premium components",
-        "new": "New",
-        "build-fasler": "Build faster",
-        "with-chakra-ui-pro": "with Chakra UI Pro 💎",
-        "description": "Beautiful and responsive React components to build your application or marketing pages quicker.",
-        "learn-more": "Learn more"
-      }
-    },
     "doc-components": {
       "copy-button": {
         "copy": "copy",
         "copied": "copied"
-      },
-      "react-live-block": {
-        "editable-example": "Editable Example"
-      },
-      "egghead-course-banner": {
-        "heading": "Build a Modern User Interface with Chakra UI",
-        "description": "In this free course, you will learn the basics of Chakra UI and how to build well-designed, accessible user interfaces with speed!",
-        "start-learning": "Start learning"
-      },
-      "carbon-ad": {
-        "message-bold": "Chakra UI Pro:",
-        "message": "Start your application or marketing site with a growing collection of beautiful and responsive UI components.",
-        "ads-via-chakra-ui": "Ads via Chakra UI"
-      },
-      "component-links": {
-        "view-source": "Source",
-        "view-storybook": "Storybook",
-        "view-theme-source": "Theme source",
-        "view-video": "Video"
       }
     },
     "search-bar": {
-      "search-the-docs": "Search the docs",
+      "search-the-wiki": "Search the wiki",
       "press": "Press",
       "and": "and",
       "to-search": "to-search"
@@ -178,20 +103,6 @@
     "page-container": {
       "skip-to-content": "Skip to Content"
     },
-    "props-table": {
-      "required": "required",
-      "description": "Description",
-      "type": "Type",
-      "default": "Default",
-      "for": "for",
-      "are-not-implemented-in-the-default-theme": "are not implemented in the default theme.",
-      "you-can": "You can",
-      "extend-the-theme": "extend the theme",
-      "to-implement-them": "to implement them."
-    },
-    "sponsor-button": {
-      "sponsor": "Sponsor"
-    },
     "table-of-content": {
       "on-this-page": "On this page",
       "versions": "Versions"
@@ -199,13 +110,5 @@
     "vercel-callout": {
       "deployed-by": "Deployed by"
     }
-  },
-  "showcase": {
-    "seo": {
-      "title": "Showcase",
-      "description": "A collection of beautiful websites that are built in Chakra UI"
-    },
-    "title": "Showcase",
-    "message": "A collection of beautiful websites that are built in Chakra UI"
   }
 }
