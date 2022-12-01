@@ -20,7 +20,7 @@
     "@emotion/styled": "^11.9.3",
     "@octokit/rest": "^19.0.5",
     "formik": "^2.2.9",
-    "framer-motion": "^7.3.5",
+    "framer-motion": "^7.6.17",
     "github-slugger": "^1.4.0",
     "highlight-words-core": "^1.2.2",
     "lodash.get": "^4.4.2",
